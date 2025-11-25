@@ -1,0 +1,33 @@
+{
+  "name": "russo-bet-slots",
+  "version": "0.1.0",
+  "description": "Fake betting platform with email-based 2FA and slot-style interface for portfolio purposes only.",
+  "type": "module",
+  "main": "src/backend/app.js",
+  "scripts": {
+    "dev": "nodemon src/backend/app.js",
+    "start": "node src/backend/app.js"
+  },
+  "keywords": [
+    "betting",
+    "2fa",
+    "slots",
+    "portfolio",
+    "nodejs",
+    "express"
+  ],
+  "author": "Joao Albero",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.0",
+    "express": "^4.19.0",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.10",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
