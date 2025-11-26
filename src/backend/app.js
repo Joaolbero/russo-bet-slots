@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import "./db/migrate.js";
 import { router as authRoutes } from "./routes/authRoutes.js";
 
 dotenv.config();
