@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Verificar login | Russo Bet Slots</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="../assets/icons/favicon.png">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+</head>
+<body class="page page-center" data-page="verify-login">
+  <div class="page-grid page-grid-auth">
+    <section>
+      <div class="brand">
+        <div class="brand-logo">
+          <span>RB</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">RUSSO BET SLOTS</span>
+          <span class="brand-subtitle">LOGIN 2FA</span>
+        </div>
+      </div>
+
+      <div class="card-glass" style="margin-top:18px;">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Código de acesso</h2>
+            <p class="card-subtitle">
+              Enviamos um código de 6 dígitos para
+              <strong data-verify-login-email></strong>. Use-o para concluir o login.
+            </p>
+          </div>
+          <span class="chip">passo 2 de 2</span>
+        </div>
+
+        <form data-form-verify-login class="form">
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="code">Código</label>
+              <input class="form-control code-input" id="code" name="code" type="text" maxlength="6" placeholder="000000">
+              <span class="form-hint">Um novo código é gerado a cada tentativa de login.</span>
+            </div>
+          </div>
+
+          <div class="form-error" data-feedback-error></div>
+          <div class="form-success" data-feedback-success></div>
+
+          <button class="btn btn-primary btn-full" type="submit" style="margin-top:10px;">
+            Concluir login
+          </button>
+
+          <div class="form-footer">
+            Quer tentar de novo?
+            <a href="./login.html" class="link-inline">Voltar para o login</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <div class="hero-mock">
+        <div class="hero-mock-header">
+          <span>Proteção extra</span>
+          <span class="chip">e-mail only</span>
+        </div>
+        <p class="text-muted" style="font-size:13px;">
+          Mesmo que alguém descubra sua senha, ainda precisa ter acesso ao seu e-mail para conseguir
+          entrar na conta. Isso simula o fluxo de segurança de plataformas reais.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <script src="../assets/js/auth.js"></script>
+</body>
+</html>
