@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Login | Russo Bet Slots</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="../assets/icons/favicon.png">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+</head>
+<body class="page page-center" data-page="login">
+  <div class="page-grid page-grid-auth">
+    <section>
+      <div class="brand">
+        <div class="brand-logo">
+          <span>RB</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">RUSSO BET SLOTS</span>
+          <span class="brand-subtitle">LOGIN FLOW</span>
+        </div>
+      </div>
+
+      <div class="card-glass" style="margin-top:18px;">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Entrar na conta</h2>
+            <p class="card-subtitle">
+              Informe seu e-mail e senha. Em seguida enviaremos um código 2FA para validar o acesso.
+            </p>
+          </div>
+          <span class="chip">passo 1 de 2</span>
+        </div>
+
+        <form data-form-login class="form">
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="email">E-mail</label>
+              <input class="form-control" id="email" name="email" type="email" placeholder="voce@exemplo.com">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="password">Senha</label>
+              <input class="form-control" id="password" name="password" type="password" placeholder="Senha cadastrada">
+            </div>
+          </div>
+
+          <div class="form-error" data-feedback-error></div>
+          <div class="form-success" data-feedback-success></div>
+
+          <button class="btn btn-primary btn-full" type="submit" style="margin-top:10px;">
+            Enviar código de acesso
+          </button>
+
+          <div class="form-footer">
+            Ainda não tem conta?
+            <a href="./register.html" class="link-inline">Cadastrar</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <div class="hero-mock">
+        <div class="hero-mock-header">
+          <span>Fluxo de login</span>
+          <span class="chip">2 etapas</span>
+        </div>
+        <p class="text-muted" style="font-size:13px;">
+          Primeiro, validamos suas credenciais de e-mail e senha. Depois, um código exclusivo é enviado
+          para o seu e-mail para confirmar o dispositivo que está acessando.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <script src="../assets/js/auth.js"></script>
+</body>
+</html>
