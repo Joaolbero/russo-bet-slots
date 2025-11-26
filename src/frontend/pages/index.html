@@ -1,17 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Russo Bet Slots</title>
-    <link rel="icon" type="image/png" href="../assets/icons/favicon.png" />
-    <link rel="stylesheet" href="../assets/css/base.css" />
-  </head>
-  <body>
-    <main class="landing">
-      <h1>Russo Bet Slots</h1>
-      <p>Plataforma fake de apostas para portfólio.</p>
-      <a href="register.html">Criar conta</a>
-      <a href="login.html">Entrar</a>
-    </main>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Russo Bet Slots</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="../assets/icons/favicon.png">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+</head>
+<body class="page page-center" data-page="home">
+  <div class="page-grid page-grid-auth">
+    <section>
+      <div class="brand">
+        <div class="brand-logo">
+          <span>RB</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">RUSSO BET SLOTS</span>
+          <span class="brand-subtitle">FAKE PORTFOLIO PLATFORM</span>
+        </div>
+      </div>
+
+      <div class="card-glass card-glass-strong" style="margin-top:18px;">
+        <div class="card-header">
+          <div>
+            <div class="chip-live">
+              <span class="chip-live-dot"></span>
+              <span>beta fake</span>
+            </div>
+            <h1 class="heading-main">
+              Slots roxos, <span>glow controlado</span> e 2FA de respeito.
+            </h1>
+            <p class="text-muted">
+              Projeto de portfólio inspirado em casas de apostas, com autenticação completa,
+              verificação por e-mail e painel protegido. Nada de dinheiro real aqui.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid-cta">
+          <button class="btn btn-primary" onclick="window.location.href='./register.html'">
+            Criar conta
+          </button>
+          <button class="btn btn-ghost" onclick="window.location.href='./login.html'">
+            Já tenho conta
+          </button>
+        </div>
+
+        <div class="pill-stack">
+          <span class="badge-tag">2FA por e-mail</span>
+          <span class="badge-tag">JWT protegido</span>
+          <span class="badge-tag">Node + Express + SQLite</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="hero-mock">
+        <div class="hero-mock-header">
+          <span style="font-size:12px; opacity:0.9;">Slots em destaque</span>
+          <span class="chip">Modo demonstração</span>
+        </div>
+        <div class="hero-mock-slots-row" data-slot-row>
+          <div class="slot-card">
+            <div class="slot-card-title">Roxo do Timão</div>
+            <div class="slot-card-odds">Volatilidade: Média</div>
+            <div class="slot-card-pill" data-slot-cell>💎</div>
+          </div>
+          <div class="slot-card">
+            <div class="slot-card-title">Neon Insano</div>
+            <div class="slot-card-odds">Volatilidade: Alta</div>
+            <div class="slot-card-pill" data-slot-cell>⭐</div>
+          </div>
+          <div class="slot-card">
+            <div class="slot-card-title">Corinthians Picks</div>
+            <div class="slot-card-odds">Retorno simulado</div>
+            <div class="slot-card-pill" data-slot-cell>🍀</div>
+          </div>
+        </div>
+        <button class="btn btn-sm btn-primary" style="margin-top:10px;" data-slot-spin>
+          Girar demo
+        </button>
+        <p class="text-muted" style="margin-top:10px; font-size:11px;">
+          Este projeto é apenas para fins educacionais e de portfólio. Nenhuma aposta real é processada.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <script src="../assets/js/slots.js"></script>
+</body>
 </html>
