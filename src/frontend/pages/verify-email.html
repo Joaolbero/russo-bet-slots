@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Verificar e-mail | Russo Bet Slots</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="../assets/icons/favicon.png">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+</head>
+<body class="page page-center" data-page="verify-email">
+  <div class="page-grid page-grid-auth">
+    <section>
+      <div class="brand">
+        <div class="brand-logo">
+          <span>RB</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">RUSSO BET SLOTS</span>
+          <span class="brand-subtitle">EMAIL CONFIRMATION</span>
+        </div>
+      </div>
+
+      <div class="card-glass" style="margin-top:18px;">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Confirme seu e-mail</h2>
+            <p class="card-subtitle">
+              Enviamos um código de 6 dígitos para
+              <strong data-verify-email-label></strong>. Insira abaixo para ativar sua conta.
+            </p>
+          </div>
+          <span class="chip">passo 2 de 2</span>
+        </div>
+
+        <form data-form-verify-email class="form">
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="code">Código</label>
+              <input class="form-control code-input" id="code" name="code" type="text" maxlength="6" placeholder="000000">
+              <span class="form-hint">Verifique também a caixa de spam.</span>
+            </div>
+          </div>
+
+          <div class="form-error" data-feedback-error></div>
+          <div class="form-success" data-feedback-success></div>
+
+          <button class="btn btn-primary btn-full" type="submit" style="margin-top:10px;">
+            Validar código
+          </button>
+
+          <div class="form-footer">
+            Errou o e-mail ou não recebeu?
+            <a href="./register.html" class="link-inline">Refazer cadastro</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <div class="hero-mock">
+        <div class="hero-mock-header">
+          <span>Segurança da conta</span>
+          <span class="chip">2FA ready</span>
+        </div>
+        <p class="text-muted" style="font-size:13px;">
+          Esta etapa garante que o e-mail informado pertence a você. Depois de ativar a conta,
+          o login também contará com um código de verificação separado, enviado a cada tentativa.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <script src="../assets/js/auth.js"></script>
+</body>
+</html>
