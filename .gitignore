@@ -4,3 +4,5 @@ npm-debug.log
 dist
 coverage
 .DS_Store
+
+src/backend/db/database.sqlite
