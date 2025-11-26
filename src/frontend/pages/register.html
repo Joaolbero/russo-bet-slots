@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Cadastro | Russo Bet Slots</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="../assets/icons/favicon.png">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+</head>
+<body class="page page-center" data-page="register">
+  <div class="page-grid page-grid-auth">
+    <section>
+      <div class="brand">
+        <div class="brand-logo">
+          <span>RB</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">RUSSO BET SLOTS</span>
+          <span class="brand-subtitle">SIGN UP FLOW</span>
+        </div>
+      </div>
+
+      <div class="card-glass" style="margin-top:18px;">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Criar conta</h2>
+            <p class="card-subtitle">
+              Cadastro completo com CPF, telefone e verificação por e-mail antes de acessar o painel.
+            </p>
+          </div>
+          <span class="chip">passo 1 de 2</span>
+        </div>
+
+        <form data-form-register class="form">
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="fullName">Nome completo</label>
+              <input class="form-control" id="fullName" name="fullName" type="text" placeholder="João Vitor Albero">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="birthDate">Data de nascimento</label>
+              <input class="form-control" id="birthDate" name="birthDate" type="date">
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="cpf">CPF</label>
+              <input class="form-control" id="cpf" name="cpf" type="text" placeholder="00000000000">
+              <span class="form-hint">Apenas números.</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="phone">Telefone</label>
+              <input class="form-control" id="phone" name="phone" type="text" placeholder="11999999999">
+              <span class="form-hint">DDD + número, apenas dígitos.</span>
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="email">E-mail</label>
+              <input class="form-control" id="email" name="email" type="email" placeholder="voce@exemplo.com">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="password">Senha</label>
+              <input class="form-control" id="password" name="password" type="password" placeholder="Senha forte">
+              <span class="form-hint">Use letras, números e símbolos.</span>
+            </div>
+          </div>
+
+          <div class="form-error" data-feedback-error></div>
+          <div class="form-success" data-feedback-success></div>
+
+          <button class="btn btn-primary btn-full" type="submit" style="margin-top:10px;">
+            Continuar para verificação
+          </button>
+
+          <div class="form-footer">
+            Já tem conta?
+            <a href="./login.html" class="link-inline">Entrar</a>
+          </div>
+        </form>
+
+        <div class="auth-meta">
+          <span>Dados armazenados apenas localmente (SQLite) para fins de estudo.</span>
+          <span class="badge-tag">Portfólio · Fake Betting</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="hero-mock">
+        <div class="hero-mock-header">
+          <span>Resumo da conta</span>
+          <span class="chip">simulação</span>
+        </div>
+        <div class="hero-mock-slots-row">
+          <div class="slot-card">
+            <div class="slot-card-title">Verificação de e-mail</div>
+            <div class="slot-card-odds">Código de 6 dígitos enviado via SMTP.</div>
+          </div>
+        </div>
+        <p class="text-muted" style="margin-top:12px; font-size:12px;">
+          Após o cadastro, um código é enviado para o e-mail informado. Somente contas verificadas
+          podem fazer login e acessar o dashboard de slots.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <script src="../assets/js/auth.js"></script>
+</body>
+</html>
