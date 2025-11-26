@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard | Russo Bet Slots</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="../assets/icons/favicon.png">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+</head>
+<body class="page page-center" data-page="dashboard">
+  <div class="page">
+    <header class="card-glass" style="margin-bottom:18px;">
+      <div class="card-header">
+        <div class="brand">
+          <div class="brand-logo">
+            <span>RB</span>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">RUSSO BET SLOTS</span>
+            <span class="brand-subtitle">FAKE DASHBOARD</span>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px;">
+          <div class="chip-live">
+            <span class="chip-live-dot"></span>
+            <span>sessão ativa</span>
+          </div>
+          <button class="btn btn-ghost btn-sm" onclick="handleLogout()">
+            Sair
+          </button>
+        </div>
+      </div>
+      <p class="text-muted" style="font-size:13px;">
+        Bem-vindo ao painel fake de slots. Todos os saldos, apostas e resultados aqui são apenas simulações
+        para fins de portfólio.
+      </p>
+    </header>
+
+    <main class="page-grid" style="grid-template-columns: minmax(0,2fr) minmax(0,1.2fr); gap:18px;">
+      <section class="card-glass card-glass-strong">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Slots em destaque</h2>
+            <p class="card-subtitle">
+              Escolha um modo e clique em girar para ver a animação fake dos símbolos.
+            </p>
+          </div>
+          <span class="chip">demo-controlled</span>
+        </div>
+
+        <div class="hero-mock">
+          <div class="hero-mock-slots-row" data-slot-row>
+            <div class="slot-card">
+              <div class="slot-card-title">Roxo do Timão</div>
+              <div class="slot-card-odds">Retorno simulado</div>
+              <div class="slot-card-pill" data-slot-cell>💎</div>
+            </div>
+            <div class="slot-card">
+              <div class="slot-card-title">Neon Insano</div>
+              <div class="slot-card-odds">Risco alto</div>
+              <div class="slot-card-pill" data-slot-cell>⭐</div>
+            </div>
+            <div class="slot-card">
+              <div class="slot-card-title">Night Mode Picks</div>
+              <div class="slot-card-odds">Estilo roxo escuro</div>
+              <div class="slot-card-pill" data-slot-cell>🍀</div>
+            </div>
+          </div>
+          <button class="btn btn-primary" style="margin-top:12px;" data-slot-spin>
+            Girar slots fake
+          </button>
+          <p class="text-muted" style="font-size:11px; margin-top:10px;">
+            Nenhuma aposta real é feita. Os símbolos são sorteados no front-end apenas para fins visuais.
+          </p>
+        </div>
+      </section>
+
+      <aside class="card-glass">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Resumo da conta fake</h2>
+            <p class="card-subtitle">
+              Dados estáticos controlados apenas para demonstração do layout e arquitetura.
+            </p>
+          </div>
+          <span class="chip">somente visual</span>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div class="slot-card">
+            <div class="slot-card-title">Saldo simulado</div>
+            <div class="slot-card-odds">R$ 1.000,00</div>
+          </div>
+          <div class="slot-card">
+            <div class="slot-card-title">Status da conta</div>
+            <div class="slot-card-odds">Verificada por e-mail e 2FA de login.</div>
+          </div>
+          <div class="slot-card">
+            <div class="slot-card-title">Tecnologias</div>
+            <div class="slot-card-odds">
+              Node.js, Express, SQLite, JWT, fluxo de autenticação completo e front em HTML/CSS/JS puro.
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script>
+    const handleLogout = () => {
+      const keys = [
+        "russo_bet_auth_token",
+        "russo_bet_login_user_id",
+        "russo_bet_login_email",
+        "russo_bet_verify_user_id",
+        "russo_bet_verify_email"
+      ];
+      keys.forEach((k) => localStorage.removeItem(k));
+      window.location.href = "./login.html";
+    };
+  </script>
+  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/slots.js"></script>
+</body>
+</html>
