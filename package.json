@@ -2,11 +2,12 @@
   "name": "russo-bet-slots",
   "version": "0.1.0",
   "description": "Fake betting platform with email-based 2FA and slot-style interface for portfolio purposes only.",
-  "type": "module",
   "main": "src/backend/app.js",
+  "type": "module",
   "scripts": {
     "dev": "nodemon src/backend/app.js",
-    "start": "node src/backend/app.js"
+    "start": "node src/backend/app.js",
+    "reset-db": "node scripts/reset-dev-db.js"
   },
   "keywords": [
     "betting",
