@@ -1,435 +1,340 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8">
-    <title>Russo Bet Slots</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="../assets/icons/favicon.png">
-    <link rel="stylesheet" href="../assets/css/base.css">
-    <link rel="stylesheet" href="../assets/css/layout.css">
-  </head>
-  <body class="page-center" data-page="home">
-    <div class="page">
-      <header class="card-glass">
-        <div class="card-header">
-          <div class="brand">
-            <div class="brand-logo">
-              <span>RB</span>
-            </div>
-            <div class="brand-text">
-              <span class="brand-title">RUSSO BET SLOTS</span>
-              <span class="brand-subtitle">Russo Bet · Slots & Apostas</span>
-            </div>
-          </div>
-          <div style="display:flex; align-items:center; gap:10px;">
-            <button class="btn btn-ghost btn-sm" type="button" onclick="scrollToSignup()">
-              Entrar
-            </button>
-            <button class="btn btn-primary btn-sm" type="button" onclick="scrollToSignup()">
-              Registre-se
-            </button>
-          </div>
-        </div>
-      </header>
-
-      <main class="site-shell">
-        <section class="site-banner">
-          <div class="site-banner-footer">
-            Slots em modo demonstração. Nenhuma transação financeira real é processada.
-          </div>
-        </section>
-
-        <section id="signup-modal" class="modal-card-signup">
-          <div class="modal-signup-top-meta">
-            <button class="btn btn-ghost btn-sm" type="button">
-              Precisa de ajuda?
-            </button>
-            <div class="modal-signup-top-right">
-              <span style="font-size:11px; color:var(--text-muted);">Já tem uma conta?</span>
-              <button class="btn btn-ghost btn-sm" type="button" onclick="scrollToLogin()">
-                Faça login aqui
-              </button>
-              <button class="modal-signup-close" type="button" onclick="closeSignupModal()">
-                ×
-              </button>
-            </div>
-          </div>
-
-          <div class="modal-signup-header">
-            <div>
-              <div class="modal-signup-title">Criar conta</div>
-              <div class="modal-signup-subtitle">
-                Preencha seus dados para liberar o acesso aos slots da Russo Bet.
-              </div>
-            </div>
-          </div>
-
-          <form data-form-register class="form">
-            <div class="form-row">
-              <div class="form-field">
-                <label class="form-label" for="fullName">
-                  Nome completo <span class="required-star">*</span>
-                </label>
-                <input class="form-control" id="fullName" name="fullName" type="text" placeholder="Seu nome completo">
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-field">
-                <label class="form-label" for="cpf">
-                  CPF <span class="required-star">*</span>
-                </label>
-                <input class="form-control" id="cpf" name="cpf" type="text" placeholder="000.000.000-00">
-                <span class="form-hint">Apenas números.</span>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-field">
-                <label class="form-label label-with-icon" for="email">
-                  E-mail <span class="required-star">*</span>
-                  <span class="tooltip-icon">
-                    i
-                    <span>Digite um e-mail válido. Será necessário verificá-lo posteriormente.</span>
-                  </span>
-                </label>
-                <input class="form-control" id="email" name="email" type="email" placeholder="voce@exemplo.com">
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-field">
-                <label class="form-label label-with-icon" for="phone">
-                  Telefone <span class="required-star">*</span>
-                  <span class="tooltip-icon">
-                    i
-                    <span>Digite um telefone válido. Será necessário verificá-lo posteriormente.</span>
-                  </span>
-                </label>
-                <input class="form-control" id="phone" name="phone" type="text" placeholder="11999999999">
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-field">
-                <label class="form-label" for="password">
-                  Senha <span class="required-star">*</span>
-                </label>
-                <div class="password-wrapper">
-                  <input class="form-control" id="password" name="password" type="password" placeholder="Crie uma senha segura">
-                  <button type="button" id="togglePassword" class="password-eye">
-                    👁️‍🗨️
-                  </button>
-                </div>
-                <div class="password-rules" id="passwordRules">
-                  <div class="password-rule">
-                    <span class="password-rule-icon" data-rule-letter>×</span>
-                    <span>Ao menos uma letra</span>
-                  </div>
-                  <div class="password-rule">
-                    <span class="password-rule-icon" data-rule-number>×</span>
-                    <span>Ao menos um número</span>
-                  </div>
-                  <div class="password-rule">
-                    <span class="password-rule-icon" data-rule-special>×</span>
-                    <span>Ao menos um caractere especial</span>
-                  </div>
-                  <div class="password-rule">
-                    <span class="password-rule-icon" data-rule-length>×</span>
-                    <span>Pelo menos 8 caracteres</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-field">
-                <label class="form-label" for="confirmPassword">
-                  Confirme a senha <span class="required-star">*</span>
-                </label>
-                <div class="password-wrapper">
-                  <input class="form-control" id="confirmPassword" name="confirmPassword" type="password" placeholder="Repita a mesma senha">
-                  <button type="button" id="toggleConfirmPassword" class="password-eye">
-                    👁️‍🗨️
-                  </button>
-                </div>
-                <div class="form-error" id="passwordMismatch" style="display:none;"></div>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-field">
-                <label class="form-label" for="birthDate">Data de nascimento</label>
-                <input class="form-control" id="birthDate" name="birthDate" type="date">
-              </div>
-              <div class="form-field">
-                <label class="form-label" for="nationality">Nacionalidade</label>
-                <select class="form-control" id="nationality" name="nationality">
-                  <option value="">Selecione</option>
-                  <option value="alemaoa">Alemão/Alemã</option>
-                  <option value="americanoa">Americano/Americana</option>
-                  <option value="argentinoa">Argentino/Argentina</option>
-                  <option value="brasileiroa">Brasileiro/Brasileira</option>
-                  <option value="canadense">Canadense</option>
-                  <option value="chilenoa">Chileno/Chilena</option>
-                  <option value="chinesa">Chinês/Chinesa</option>
-                  <option value="espanhola">Espanhol/Espanhola</option>
-                  <option value="francesa">Francês/Francesa</option>
-                  <option value="indiana">Indiano/Indiana</option>
-                  <option value="italiana">Italiano/Italiana</option>
-                  <option value="japonesa">Japonês/Japonesa</option>
-                  <option value="mexicanoa">Mexicano/Mexicana</option>
-                  <option value="portuguesa">Português/Portuguesa</option>
-                  <option value="russoa">Russo/Russa</option>
-                  <option value="suecoa">Sueco/Sueca</option>
-                  <option value="suicoa">Suíço/Suíça</option>
-                  <option value="outroa">Outro(a)</option>
-                </select>
-                <input class="form-control" id="nationalityOther" name="nationalityOther" type="text" placeholder="Digite sua nacionalidade" style="margin-top:6px; display:none;">
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-field">
-                <label class="form-label" for="refCode">Código de referência</label>
-                <input class="form-control" id="refCode" name="refCode" type="text" readonly>
-                <span class="form-hint">Gerado automaticamente para fins de demonstração.</span>
-              </div>
-            </div>
-
-            <div class="checkbox-row">
-              <input type="checkbox" id="termsCheck">
-              <label for="termsCheck">
-                Confirmo que <span class="link-inline-plain">tenho mais de 18 anos</span> e aceito os
-                <a href="#" onclick="openTerms(event)">Termos de Condição</a> e a
-                <a href="#" onclick="openPrivacy(event)">Política de Privacidade</a>.
-              </label>
-            </div>
-
-            <div class="form-error" data-feedback-error></div>
-            <div class="form-success" data-feedback-success></div>
-
-            <button class="btn btn-primary btn-full" type="submit" style="margin-top:12px;">
-              Concluir registro
-            </button>
-          </form>
-        </section>
-      </main>
-    </div>
-
-    <div class="overlay-age" id="ageGate">
-      <div class="modal-age">
-        <div class="modal-age-header">
-          Você tem mais de 18 anos?
-        </div>
-        <div class="modal-age-body">
-          O conteúdo desta plataforma simula uma casa de apostas e é indicado apenas para maiores de idade.
-        </div>
-        <div class="modal-age-actions">
-          <button class="btn btn-ghost" type="button" onclick="underAge()">
-            Não
-          </button>
-          <button class="btn btn-primary" type="button" onclick="confirmAge()">
-            Sim
-          </button>
-        </div>
-        <div class="modal-age-note">
-          Nenhuma transação financeira real é processada.
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Russo Bet Slots</title>
+  <link rel="icon" type="image/png" href="../assets/icons/favicon.png">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+</head>
+<body class="page-register">
+  <!-- Gate de idade -->
+  <div class="age-gate-overlay" id="age-gate-overlay">
+    <div class="age-gate-modal">
+      <div class="age-gate-logo">
+        <span class="brand-initials">RB</span>
+        <div class="brand-text">
+          <span class="brand-title">Russo Bet Slots</span>
+          <span class="brand-subtitle">Russo Bet · Slots &amp; Apostas</span>
         </div>
       </div>
+      <div class="age-gate-content">
+        <h1 class="age-gate-title">Você tem mais de 18 anos?</h1>
+        <p class="age-gate-description">
+          O acesso é permitido apenas para maiores de idade. Escolha uma das opções abaixo.
+        </p>
+        <div class="age-gate-actions">
+          <button id="age-no" class="btn btn-outline">Não</button>
+          <button id="age-yes" class="btn btn-primary">Sim</button>
+        </div>
+      </div>
+      <p class="age-gate-footer">
+        Jogue com responsabilidade. Conteúdo fictício para fins de estudo.
+      </p>
     </div>
+  </div>
 
-    <script src="../assets/js/auth.js"></script>
-    <script>
-      const ageGate = document.getElementById("ageGate");
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-brand">
+        <span class="brand-initials">RB</span>
+        <div class="brand-text">
+          <span class="brand-title">Russo Bet Slots</span>
+          <span class="brand-subtitle">Russo Bet · Slots &amp; Apostas</span>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <button class="btn btn-ghost" id="header-login">Entrar</button>
+        <button class="btn btn-primary" id="header-register">Registre-se</button>
+      </div>
+    </div>
+  </header>
 
-      const confirmAge = () => {
-        if (ageGate) {
-          ageGate.style.display = "none";
-        }
-      };
+  <!-- Conteúdo principal (mesmo layout do register) -->
+  <main class="register-wrapper">
+    <section class="register-card">
+      <!-- Lado esquerdo – hero / banner -->
+      <div class="register-hero">
+        <div class="register-hero-gradient"></div>
+        <div class="register-hero-text">
+          <h2>Slots roxos com glow controlado</h2>
+          <p>
+            Aqui você enxerga um “lobby” de jogos fictícios. Apenas saldo demo para simulação,
+            sem dinheiro real envolvido.
+          </p>
+        </div>
+      </div>
 
-      const underAge = () => {
-        if (!ageGate) return;
-        const modal = ageGate.querySelector(".modal-age-body");
-        if (modal) {
-          modal.textContent =
-            "Desculpe. Este conteúdo é restrito para maiores de 18 anos. Feche esta aba ou recarregue a página para sair.";
-        }
-        const actions = ageGate.querySelector(".modal-age-actions");
-        if (actions) {
-          actions.innerHTML = "";
-        }
-      };
+      <!-- Lado direito – formulário -->
+      <div class="register-form-container">
+        <div class="register-header">
+          <button class="helper-pill">Precisa de ajuda?</button>
+          <div class="register-header-right">
+            <span class="register-header-text">Já tem uma conta?</span>
+            <button class="link-button" id="register-go-login">Faça login aqui</button>
+          </div>
+        </div>
 
-      const scrollToSignup = () => {
-        const el = document.getElementById("signup-modal");
-        if (!el) return;
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
-      };
+        <h1 class="register-title">Criar conta</h1>
+        <p class="register-subtitle">
+          Preencha seus dados para liberar o acesso aos slots da Russo Bet.
+        </p>
 
-      const scrollToLogin = () => {
-        scrollToSignup();
-      };
+        <form id="register-form" class="register-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="field-label" for="fullName">
+                Nome completo
+                <span class="required">*</span>
+              </label>
+              <input
+                id="fullName"
+                name="fullName"
+                type="text"
+                class="input"
+                placeholder="Seu nome completo"
+                autocomplete="name"
+                required
+              >
+            </div>
 
-      const closeSignupModal = () => {
-        const el = document.getElementById("signup-modal");
-        if (!el) return;
-        el.style.display = "none";
-      };
+            <div class="form-group">
+              <label class="field-label" for="cpf">
+                CPF
+                <span class="required">*</span>
+              </label>
+              <input
+                id="cpf"
+                name="cpf"
+                type="text"
+                class="input"
+                placeholder="000.000.000-00"
+                inputmode="numeric"
+                maxlength="14"
+                autocomplete="off"
+                required
+              >
+              <span class="field-hint">Apenas números.</span>
+            </div>
 
-      const openTerms = (event) => {
-        event.preventDefault();
-        alert("Aqui entrarão os Termos de Condição em uma próxima etapa.");
-      };
+            <div class="form-group">
+              <label class="field-label with-info" for="email">
+                E-mail
+                <span class="required">*</span>
+                <span class="info-wrapper">
+                  <span class="info-icon">i</span>
+                  <span class="info-tooltip">
+                    Digite um e-mail válido. Será necessário verificá-lo posteriormente.
+                  </span>
+                </span>
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                class="input"
+                placeholder="voce@exemplo.com"
+                autocomplete="email"
+                required
+              >
+            </div>
 
-      const openPrivacy = (event) => {
-        event.preventDefault();
-        alert("Aqui entrará a Política de Privacidade em uma próxima etapa.");
-      };
+            <div class="form-group">
+              <label class="field-label with-info" for="phone">
+                Telefone
+                <span class="required">*</span>
+                <span class="info-wrapper">
+                  <span class="info-icon">i</span>
+                  <span class="info-tooltip">
+                    Digite um telefone válido. Será necessário verificá-lo posteriormente.
+                  </span>
+                </span>
+              </label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                class="input"
+                placeholder="11999999999"
+                inputmode="numeric"
+                autocomplete="tel"
+                required
+              >
+            </div>
 
-      const generateRefCode = () => {
-        const input = document.getElementById("refCode");
-        if (!input) return;
-        const code = Math.random().toString(16).slice(2, 14);
-        input.value = code;
-      };
+            <div class="form-group full-width">
+              <label class="field-label" for="password">
+                Senha
+                <span class="required">*</span>
+              </label>
+              <div class="password-wrapper">
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  class="input"
+                  placeholder="Crie uma senha segura"
+                  autocomplete="new-password"
+                  required
+                >
+                <button type="button" class="password-toggle" data-target="password">
+                  <span class="eye-icon eye-closed"></span>
+                </button>
+              </div>
 
-      const setupPasswordHelpers = () => {
-        const input = document.getElementById("password");
-        const confirmInput = document.getElementById("confirmPassword");
-        const btnToggle = document.getElementById("togglePassword");
-        const btnToggleConfirm = document.getElementById("toggleConfirmPassword");
-        const iconLetter = document.querySelector("[data-rule-letter]");
-        const iconNumber = document.querySelector("[data-rule-number]");
-        const iconSpecial = document.querySelector("[data-rule-special]");
-        const iconLength = document.querySelector("[data-rule-length]");
-        const form = document.querySelector("[data-form-register]");
-        const errorBox = form ? form.querySelector("[data-feedback-error]") : null;
-        const mismatchBox = document.getElementById("passwordMismatch");
+              <div class="password-rules" id="password-rules">
+                <div class="password-rule" data-rule="letter">
+                  <span class="rule-icon"></span>
+                  <span>Ao menos uma letra</span>
+                </div>
+                <div class="password-rule" data-rule="number">
+                  <span class="rule-icon"></span>
+                  <span>Ao menos um número</span>
+                </div>
+                <div class="password-rule" data-rule="special">
+                  <span class="rule-icon"></span>
+                  <span>Ao menos um caractere especial</span>
+                </div>
+                <div class="password-rule" data-rule="length">
+                  <span class="rule-icon"></span>
+                  <span>Pelo menos 8 caracteres</span>
+                </div>
+              </div>
+            </div>
 
-        if (btnToggle && input) {
-          btnToggle.addEventListener("click", () => {
-            input.type = input.type === "password" ? "text" : "password";
-          });
-        }
+            <div class="form-group full-width">
+              <label class="field-label" for="confirmPassword">
+                Confirme a senha
+                <span class="required">*</span>
+              </label>
+              <div class="password-wrapper">
+                <input
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  type="password"
+                  class="input"
+                  placeholder="Repita a mesma senha"
+                  autocomplete="new-password"
+                  required
+                >
+                <button type="button" class="password-toggle" data-target="confirmPassword">
+                  <span class="eye-icon eye-closed"></span>
+                </button>
+              </div>
+              <p class="password-match-message" id="password-match-message">
+                As senhas não correspondem. Verifique se estão iguais.
+              </p>
+            </div>
 
-        if (btnToggleConfirm && confirmInput) {
-          btnToggleConfirm.addEventListener("click", () => {
-            confirmInput.type = confirmInput.type === "password" ? "text" : "password";
-          });
-        }
+            <div class="form-group">
+              <label class="field-label" for="birthDate">
+                Data de nascimento
+                <span class="required">*</span>
+              </label>
+              <div class="date-wrapper">
+                <input
+                  id="birthDate"
+                  name="birthDate"
+                  type="text"
+                  class="input"
+                  placeholder="dd/mm/aaaa"
+                  autocomplete="bday"
+                  maxlength="10"
+                  required
+                >
+                <span class="date-icon"></span>
+              </div>
+            </div>
 
-        const updateRuleIcon = (icon, ok) => {
-          if (!icon) return;
-          if (ok) {
-            icon.classList.add("ok");
-            icon.textContent = "✓";
-          } else {
-            icon.classList.remove("ok");
-            icon.textContent = "×";
-          }
-        };
+            <div class="form-group">
+              <label class="field-label" for="nationality">
+                Nacionalidade(s)
+                <span class="required">*</span>
+              </label>
+              <select
+                id="nationality"
+                name="nationality"
+                class="input select"
+                multiple
+              >
+                <option value="" disabled>Selecione</option>
+                <option value="alemao">Alemão/Alemã</option>
+                <option value="americano">Americano/Americana</option>
+                <option value="argentino">Argentino/Argentina</option>
+                <option value="brasileiro">Brasileiro/Brasileira</option>
+                <option value="canadense">Canadense</option>
+                <option value="chileno">Chileno/Chilena</option>
+                <option value="chines">Chinês/Chinesa</option>
+                <option value="espanhol">Espanhol/Espanhola</option>
+                <option value="frances">Francês/Francesa</option>
+                <option value="indiano">Indiano/Indiana</option>
+                <option value="italiano">Italiano/Italiana</option>
+                <option value="japones">Japonês/Japonesa</option>
+                <option value="mexicano">Mexicano/Mexicana</option>
+                <option value="portugues">Português/Portuguesa</option>
+                <option value="russo">Russo/Russa</option>
+                <option value="sueco">Sueco/Sueca</option>
+                <option value="suico">Suíço/Suíça</option>
+                <option value="outro">Outro(a)</option>
+              </select>
+              <span class="field-hint">É possível selecionar mais de uma opção.</span>
 
-        const updatePasswordRules = () => {
-          if (!input) return;
-          const value = input.value || "";
-          const hasLetter = /[A-Za-z]/.test(value);
-          const hasNumber = /[0-9]/.test(value);
-          const hasSpecial = /[^A-Za-z0-9]/.test(value);
-          const hasLength = value.length >= 8;
+              <div class="form-group nationality-custom" id="nationality-custom-wrapper">
+                <label class="field-label" for="nationalityCustom">
+                  Digite sua nacionalidade
+                </label>
+                <input
+                  id="nationalityCustom"
+                  name="nationalityCustom"
+                  type="text"
+                  class="input"
+                  placeholder="Informe sua nacionalidade"
+                  maxlength="30"
+                >
+              </div>
+            </div>
 
-          updateRuleIcon(iconLetter, hasLetter);
-          updateRuleIcon(iconNumber, hasNumber);
-          updateRuleIcon(iconSpecial, hasSpecial);
-          updateRuleIcon(iconLength, hasLength);
-        };
+            <div class="form-group full-width">
+              <label class="field-label" for="referenceCode">
+                Código de referência
+              </label>
+              <input
+                id="referenceCode"
+                name="referenceCode"
+                type="text"
+                class="input"
+                readonly
+              >
+              <span class="field-hint">
+                Gerado automaticamente para fins de demonstração.
+              </span>
+            </div>
+          </div>
 
-        const checkPasswordsMatch = () => {
-          if (!input || !confirmInput || !mismatchBox) return;
-          const value = input.value || "";
-          const confirmValue = confirmInput.value || "";
-          if (confirmValue.length === 0) {
-            mismatchBox.style.display = "none";
-            mismatchBox.textContent = "";
-            return;
-          }
-          if (value !== confirmValue) {
-            mismatchBox.textContent = "As senhas não correspondem. Verifique se estão iguais.";
-            mismatchBox.style.display = "block";
-          } else {
-            mismatchBox.style.display = "none";
-            mismatchBox.textContent = "";
-          }
-        };
+          <label class="checkbox-row">
+            <input type="checkbox" id="terms" name="terms" required>
+            <span class="checkbox-fake"></span>
+            <span class="checkbox-text">
+              Confirmo que <span class="highlight-text">tenho mais de 18 anos</span> e aceito os
+              <a href="#" class="text-link">Termos de Condição</a> e a
+              <a href="#" class="text-link">Política de Privacidade</a>.
+            </span>
+          </label>
 
-        if (input) {
-          input.addEventListener("input", () => {
-            updatePasswordRules();
-            checkPasswordsMatch();
-          });
-        }
+          <button type="submit" class="btn btn-primary btn-full">
+            Concluir registro
+          </button>
 
-        if (confirmInput) {
-          confirmInput.addEventListener("input", () => {
-            checkPasswordsMatch();
-          });
-        }
+          <p class="register-disclaimer">
+            Dados armazenados apenas localmente (SQLite) para fins de estudo.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
 
-        if (form && input && confirmInput) {
-          form.addEventListener("submit", (event) => {
-            if (input.value !== confirmInput.value) {
-              if (errorBox) {
-                errorBox.textContent = "As senhas não correspondem.";
-              }
-              confirmInput.focus();
-              event.preventDefault();
-            }
-          });
-        }
-      };
-
-      const setupCpfMask = () => {
-        const cpfInput = document.getElementById("cpf");
-        if (!cpfInput) return;
-        cpfInput.addEventListener("input", () => {
-          let value = cpfInput.value.replace(/\D/g, "").slice(0, 11);
-          let formatted = "";
-          if (value.length > 0) formatted = value.slice(0, 3);
-          if (value.length >= 4) formatted += "." + value.slice(3, 6);
-          if (value.length >= 7) formatted += "." + value.slice(6, 9);
-          if (value.length >= 10) formatted += "-" + value.slice(9, 11);
-          cpfInput.value = formatted;
-        });
-      };
-
-      const setupNationalityOther = () => {
-        const select = document.getElementById("nationality");
-        const otherInput = document.getElementById("nationalityOther");
-        if (!select || !otherInput) return;
-
-        otherInput.maxLength = 30;
-
-        select.addEventListener("change", () => {
-          if (select.value === "outroa") {
-            otherInput.style.display = "block";
-          } else {
-            otherInput.style.display = "none";
-            otherInput.value = "";
-          }
-        });
-
-        otherInput.addEventListener("input", () => {
-          otherInput.value = otherInput.value.replace(/[^A-Za-zÀ-ÿ\s]/g, "");
-        });
-      };
-
-      document.addEventListener("DOMContentLoaded", () => {
-        generateRefCode();
-        setupPasswordHelpers();
-        setupCpfMask();
-        setupNationalityOther();
-      });
-    </script>
-  </body>
+  <script src="../assets/js/auth.js"></script>
+</body>
 </html>
