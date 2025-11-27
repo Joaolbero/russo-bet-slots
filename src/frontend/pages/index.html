@@ -67,14 +67,18 @@
           <form data-form-register class="form">
             <div class="form-row">
               <div class="form-field">
-                <label class="form-label label-required" for="fullName">Nome completo</label>
+                <label class="form-label" for="fullName">
+                  Nome completo <span class="required-star">*</span>
+                </label>
                 <input class="form-control" id="fullName" name="fullName" type="text" placeholder="Seu nome completo">
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-field">
-                <label class="form-label label-required" for="cpf">CPF</label>
+                <label class="form-label" for="cpf">
+                  CPF <span class="required-star">*</span>
+                </label>
                 <input class="form-control" id="cpf" name="cpf" type="text" placeholder="000.000.000-00">
                 <span class="form-hint">Apenas números.</span>
               </div>
@@ -82,8 +86,8 @@
 
             <div class="form-row">
               <div class="form-field">
-                <label class="form-label label-required label-with-icon" for="email">
-                  E-mail
+                <label class="form-label label-with-icon" for="email">
+                  E-mail <span class="required-star">*</span>
                   <span class="tooltip-icon">
                     i
                     <span>Digite um e-mail válido. Será necessário verificá-lo posteriormente.</span>
@@ -95,8 +99,8 @@
 
             <div class="form-row">
               <div class="form-field">
-                <label class="form-label label-required label-with-icon" for="phone">
-                  Telefone
+                <label class="form-label label-with-icon" for="phone">
+                  Telefone <span class="required-star">*</span>
                   <span class="tooltip-icon">
                     i
                     <span>Digite um telefone válido. Será necessário verificá-lo posteriormente.</span>
@@ -108,7 +112,9 @@
 
             <div class="form-row">
               <div class="form-field">
-                <label class="form-label label-required" for="password">Senha</label>
+                <label class="form-label" for="password">
+                  Senha <span class="required-star">*</span>
+                </label>
                 <div class="password-wrapper">
                   <input class="form-control" id="password" name="password" type="password" placeholder="Crie uma senha segura">
                   <button type="button" id="togglePassword" class="password-eye">
@@ -138,7 +144,9 @@
 
             <div class="form-row">
               <div class="form-field">
-                <label class="form-label label-required" for="confirmPassword">Confirme a senha</label>
+                <label class="form-label" for="confirmPassword">
+                  Confirme a senha <span class="required-star">*</span>
+                </label>
                 <div class="password-wrapper">
                   <input class="form-control" id="confirmPassword" name="confirmPassword" type="password" placeholder="Repita a mesma senha">
                   <button type="button" id="toggleConfirmPassword" class="password-eye">
