@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8">
   <title>Russo Bet Slots</title>
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="../assets/css/base.css">
   <link rel="stylesheet" href="../assets/css/layout.css">
 </head>
+
 <body class="page page-center" data-page="home">
   <div class="page">
     <header class="card-glass" style="margin-bottom:18px;">
@@ -18,7 +20,7 @@
           </div>
           <div class="brand-text">
             <span class="brand-title">RUSSO BET SLOTS</span>
-            <span class="brand-subtitle">PLATAFORMA FAKE · SOMENTE DEMO</span>
+            <span class="brand-subtitle">Russo Bet · Slots & Apostas</span>
           </div>
         </div>
         <div style="display:flex; align-items:center; gap:10px;">
@@ -57,7 +59,7 @@
           <div>
             <div class="modal-signup-title">Criar conta</div>
             <div class="modal-signup-subtitle">
-              Preencha seus dados para liberar o acesso aos slots fake da Russo Bet.
+              Preencha seus dados para liberar o acesso aos slots da Russo Bet.
             </div>
           </div>
           <button class="modal-signup-close" type="button" onclick="closeSignupModal()">
@@ -111,8 +113,10 @@
             <div class="form-field">
               <label class="form-label label-required" for="password">Senha</label>
               <div style="position:relative;">
-                <input class="form-control" id="password" name="password" type="password" placeholder="Crie uma senha segura">
-                <button type="button" id="togglePassword" class="btn btn-ghost btn-sm" style="position:absolute; right:4px; top:4px; padding:4px 10px;">
+                <input class="form-control" id="password" name="password" type="password"
+                  placeholder="Crie uma senha segura">
+                <button type="button" id="togglePassword" class="btn btn-ghost btn-sm"
+                  style="position:absolute; right:4px; top:4px; padding:4px 10px;">
                   Ver
                 </button>
               </div>
@@ -232,9 +236,14 @@
       if (!ageGate) return;
       const modal = ageGate.querySelector(".modal-age-body");
       if (modal) {
-        modal.textContent = "Desculpe. Este conteúdo é restrito para maiores de 18 anos. Feche esta aba e volte quando atingir a maioridade.";
+        modal.textContent = "Desculpe. Este conteúdo é restrito para maiores de 18 anos. Feche esta aba ou recarregue a página para sair.";
+      }
+      const actions = ageGate.querySelector(".modal-age-actions");
+      if (actions) {
+        actions.innerHTML = "";
       }
     };
+
 
     const scrollToSignup = () => {
       const el = document.getElementById("signup-modal");
@@ -322,4 +331,5 @@
     });
   </script>
 </body>
+
 </html>
