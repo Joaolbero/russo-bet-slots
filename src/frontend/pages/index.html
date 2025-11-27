@@ -44,10 +44,13 @@
             <button class="btn btn-ghost btn-sm" type="button">
               Precisa de ajuda?
             </button>
-            <div>
+            <div class="modal-signup-top-right">
               <span style="font-size:11px; color:var(--text-muted);">Já tem uma conta?</span>
               <button class="btn btn-ghost btn-sm" type="button" onclick="scrollToLogin()">
                 Faça login aqui
+              </button>
+              <button class="modal-signup-close" type="button" onclick="closeSignupModal()">
+                ×
               </button>
             </div>
           </div>
@@ -59,9 +62,6 @@
                 Preencha seus dados para liberar o acesso aos slots da Russo Bet.
               </div>
             </div>
-            <button class="modal-signup-close" type="button" onclick="closeSignupModal()">
-              ×
-            </button>
           </div>
 
           <form data-form-register class="form">
@@ -82,27 +82,27 @@
 
             <div class="form-row">
               <div class="form-field">
-                <label class="form-label label-required" for="email">E-mail</label>
-                <div>
-                  <input class="form-control" id="email" name="email" type="email" placeholder="voce@exemplo.com">
+                <label class="form-label label-required label-with-icon" for="email">
+                  E-mail
                   <span class="tooltip-icon">
                     i
                     <span>Digite um e-mail válido. Será necessário verificá-lo posteriormente.</span>
                   </span>
-                </div>
+                </label>
+                <input class="form-control" id="email" name="email" type="email" placeholder="voce@exemplo.com">
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-field">
-                <label class="form-label label-required" for="phone">Telefone</label>
-                <div>
-                  <input class="form-control" id="phone" name="phone" type="text" placeholder="11999999999">
+                <label class="form-label label-required label-with-icon" for="phone">
+                  Telefone
                   <span class="tooltip-icon">
                     i
                     <span>Digite um telefone válido. Será necessário verificá-lo posteriormente.</span>
                   </span>
-                </div>
+                </label>
+                <input class="form-control" id="phone" name="phone" type="text" placeholder="11999999999">
               </div>
             </div>
 
@@ -145,6 +145,7 @@
                     👁️‍🗨️
                   </button>
                 </div>
+                <div class="form-error" id="passwordMismatch" style="display:none;"></div>
               </div>
             </div>
 
@@ -157,23 +158,23 @@
                 <label class="form-label" for="nationality">Nacionalidade</label>
                 <select class="form-control" id="nationality" name="nationality">
                   <option value="">Selecione</option>
-                  <option value="alemaoa">Alemão(ã)</option>
-                  <option value="americanoa">Americano(a)</option>
-                  <option value="argentinoa">Argentino(a)</option>
-                  <option value="brasileiroa">Brasileiro(a)</option>
+                  <option value="alemaoa">Alemão/Alemã</option>
+                  <option value="americanoa">Americano/Americana</option>
+                  <option value="argentinoa">Argentino/Argentina</option>
+                  <option value="brasileiroa">Brasileiro/Brasileira</option>
                   <option value="canadense">Canadense</option>
-                  <option value="chilenoa">Chileno(a)</option>
-                  <option value="chinesa">Chinês(Chinesa)</option>
-                  <option value="espanhola">Espanhol(a)</option>
-                  <option value="francesa">Francês(Francesa)</option>
-                  <option value="indiana">Indiano(a)</option>
-                  <option value="italiana">Italiano(a)</option>
-                  <option value="japonesa">Japonês(Japonesa)</option>
-                  <option value="mexicanoa">Mexicano(a)</option>
-                  <option value="portuguesa">Português(Portuguesa)</option>
-                  <option value="russoa">Russo(a)</option>
-                  <option value="suecoa">Sueco(a)</option>
-                  <option value="suicoa">Suíço(a)</option>
+                  <option value="chilenoa">Chileno/Chilena</option>
+                  <option value="chinesa">Chinês/Chinesa</option>
+                  <option value="espanhola">Espanhol/Espanhola</option>
+                  <option value="francesa">Francês/Francesa</option>
+                  <option value="indiana">Indiano/Indiana</option>
+                  <option value="italiana">Italiano/Italiana</option>
+                  <option value="japonesa">Japonês/Japonesa</option>
+                  <option value="mexicanoa">Mexicano/Mexicana</option>
+                  <option value="portuguesa">Português/Portuguesa</option>
+                  <option value="russoa">Russo/Russa</option>
+                  <option value="suecoa">Sueco/Sueca</option>
+                  <option value="suicoa">Suíço/Suíça</option>
                   <option value="outroa">Outro(a)</option>
                 </select>
                 <input class="form-control" id="nationalityOther" name="nationalityOther" type="text" placeholder="Digite sua nacionalidade" style="margin-top:6px; display:none;">
@@ -297,24 +298,17 @@
         const iconLength = document.querySelector("[data-rule-length]");
         const form = document.querySelector("[data-form-register]");
         const errorBox = form ? form.querySelector("[data-feedback-error]") : null;
+        const mismatchBox = document.getElementById("passwordMismatch");
 
         if (btnToggle && input) {
           btnToggle.addEventListener("click", () => {
-            if (input.type === "password") {
-              input.type = "text";
-            } else {
-              input.type = "password";
-            }
+            input.type = input.type === "password" ? "text" : "password";
           });
         }
 
         if (btnToggleConfirm && confirmInput) {
           btnToggleConfirm.addEventListener("click", () => {
-            if (confirmInput.type === "password") {
-              confirmInput.type = "text";
-            } else {
-              confirmInput.type = "password";
-            }
+            confirmInput.type = confirmInput.type === "password" ? "text" : "password";
           });
         }
 
@@ -329,18 +323,48 @@
           }
         };
 
+        const updatePasswordRules = () => {
+          if (!input) return;
+          const value = input.value || "";
+          const hasLetter = /[A-Za-z]/.test(value);
+          const hasNumber = /[0-9]/.test(value);
+          const hasSpecial = /[^A-Za-z0-9]/.test(value);
+          const hasLength = value.length >= 8;
+
+          updateRuleIcon(iconLetter, hasLetter);
+          updateRuleIcon(iconNumber, hasNumber);
+          updateRuleIcon(iconSpecial, hasSpecial);
+          updateRuleIcon(iconLength, hasLength);
+        };
+
+        const checkPasswordsMatch = () => {
+          if (!input || !confirmInput || !mismatchBox) return;
+          const value = input.value || "";
+          const confirmValue = confirmInput.value || "";
+          if (confirmValue.length === 0) {
+            mismatchBox.style.display = "none";
+            mismatchBox.textContent = "";
+            return;
+          }
+          if (value !== confirmValue) {
+            mismatchBox.textContent = "As senhas não correspondem. Verifique se estão iguais.";
+            mismatchBox.style.display = "block";
+          } else {
+            mismatchBox.style.display = "none";
+            mismatchBox.textContent = "";
+          }
+        };
+
         if (input) {
           input.addEventListener("input", () => {
-            const value = input.value || "";
-            const hasLetter = /[A-Za-z]/.test(value);
-            const hasNumber = /[0-9]/.test(value);
-            const hasSpecial = /[^A-Za-z0-9]/.test(value);
-            const hasLength = value.length >= 8;
+            updatePasswordRules();
+            checkPasswordsMatch();
+          });
+        }
 
-            updateRuleIcon(iconLetter, hasLetter);
-            updateRuleIcon(iconNumber, hasNumber);
-            updateRuleIcon(iconSpecial, hasSpecial);
-            updateRuleIcon(iconLength, hasLength);
+        if (confirmInput) {
+          confirmInput.addEventListener("input", () => {
+            checkPasswordsMatch();
           });
         }
 
@@ -348,7 +372,7 @@
           form.addEventListener("submit", (event) => {
             if (input.value !== confirmInput.value) {
               if (errorBox) {
-                errorBox.textContent = "As senhas não coincidem.";
+                errorBox.textContent = "As senhas não correspondem.";
               }
               confirmInput.focus();
               event.preventDefault();
@@ -376,7 +400,7 @@
         const otherInput = document.getElementById("nationalityOther");
         if (!select || !otherInput) return;
 
-        otherInput.maxLength = 20;
+        otherInput.maxLength = 30;
 
         select.addEventListener("change", () => {
           if (select.value === "outroa") {
