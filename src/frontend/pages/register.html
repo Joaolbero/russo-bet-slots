@@ -1,327 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Russo Bet Slots · Criar conta</title>
+  <meta charset="utf-8">
+  <title>Cadastro | Russo Bet Slots</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="../assets/icons/favicon.png">
   <link rel="stylesheet" href="../assets/css/base.css">
   <link rel="stylesheet" href="../assets/css/layout.css">
 </head>
-<body class="page-register">
-  <div class="age-gate-overlay age-gate-hidden" id="age-gate-overlay">
-    <div class="age-gate-modal">
-      <div class="age-gate-logo">
-        <span class="brand-initials">RB</span>
+<body class="page page-center" data-page="register">
+  <div class="page-grid page-grid-auth">
+    <section>
+      <div class="brand">
+        <div class="brand-logo">
+          <span>RB</span>
+        </div>
         <div class="brand-text">
-          <span class="brand-title">Russo Bet Slots</span>
-          <span class="brand-subtitle">Russo Bet · Slots &amp; Apostas</span>
-        </div>
-      </div>
-      <div class="age-gate-content">
-        <h1 class="age-gate-title">Você tem mais de 18 anos?</h1>
-        <p class="age-gate-description">
-          O acesso é permitido apenas para maiores de idade. Escolha uma das opções abaixo.
-        </p>
-        <div class="age-gate-actions">
-          <button id="age-no" class="btn btn-outline">Não</button>
-          <button id="age-yes" class="btn btn-primary">Sim</button>
-        </div>
-      </div>
-      <p class="age-gate-footer">
-        Jogue com responsabilidade. Conteúdo fictício para fins de estudo.
-      </p>
-    </div>
-  </div>
-
-  <header class="topbar">
-    <div class="topbar-inner">
-      <div class="topbar-brand">
-        <span class="brand-initials">RB</span>
-        <div class="brand-text">
-          <span class="brand-title">Russo Bet Slots</span>
-          <span class="brand-subtitle">Russo Bet · Slots &amp; Apostas</span>
-        </div>
-      </div>
-      <div class="topbar-actions">
-        <button class="btn btn-ghost" id="header-login">Entrar</button>
-        <button class="btn btn-primary" id="header-register">Registre-se</button>
-      </div>
-    </div>
-  </header>
-
-  <main class="register-wrapper">
-    <section class="register-card">
-      <div class="register-hero">
-        <div class="register-hero-gradient"></div>
-        <div class="register-hero-text">
-          <h2>Slots roxos com glow controlado</h2>
-          <p>Aqui você enxerga um “lobby” de jogos fictícios. Apenas saldo demo para simulação.</p>
+          <span class="brand-title">RUSSO BET SLOTS</span>
+          <span class="brand-subtitle">SIGN UP FLOW</span>
         </div>
       </div>
 
-      <div class="register-form-container">
-        <div class="register-header">
-          <button class="helper-pill">Precisa de ajuda?</button>
-          <div class="register-header-right">
-            <span class="register-header-text">Já tem uma conta?</span>
-            <button class="link-button" id="register-go-login">Faça login aqui</button>
+      <div class="card-glass" style="margin-top:18px;">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Criar conta</h2>
+            <p class="card-subtitle">
+              Cadastro completo com CPF, telefone e verificação por e-mail antes de acessar o painel.
+            </p>
           </div>
+          <span class="chip">passo 1 de 2</span>
         </div>
 
-        <h1 class="register-title">Criar conta</h1>
-        <p class="register-subtitle">
-          Preencha seus dados para liberar o acesso aos slots da Russo Bet.
-        </p>
-
-        <form id="register-form" class="register-form">
-          <div class="form-grid">
-            <div class="form-group">
-              <label class="field-label" for="fullName">
-                Nome completo
-                <span class="required">*</span>
-              </label>
-              <input
-                id="fullName"
-                name="fullName"
-                type="text"
-                class="input"
-                placeholder="Seu nome completo"
-                autocomplete="name"
-                required
-              >
-            </div>
-
-            <div class="form-group">
-              <label class="field-label" for="cpf">
-                CPF
-                <span class="required">*</span>
-              </label>
-              <input
-                id="cpf"
-                name="cpf"
-                type="text"
-                class="input"
-                placeholder="000.000.000-00"
-                inputmode="numeric"
-                maxlength="14"
-                autocomplete="off"
-                required
-              >
-              <span class="field-hint">Apenas números.</span>
-            </div>
-
-            <div class="form-group">
-              <label class="field-label with-info" for="email">
-                E-mail
-                <span class="required">*</span>
-                <span class="info-wrapper">
-                  <span class="info-icon">i</span>
-                  <span class="info-tooltip">
-                    Digite um e-mail válido. Será necessário verificá-lo posteriormente.
-                  </span>
-                </span>
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                class="input"
-                placeholder="voce@exemplo.com"
-                autocomplete="email"
-                required
-              >
-            </div>
-
-            <div class="form-group">
-              <label class="field-label with-info" for="phone">
-                Telefone
-                <span class="required">*</span>
-                <span class="info-wrapper">
-                  <span class="info-icon">i</span>
-                  <span class="info-tooltip">
-                    Digite um telefone válido. Será necessário verificá-lo posteriormente.
-                  </span>
-                </span>
-              </label>
-              <input
-                id="phone"
-                name="phone"
-                type="tel"
-                class="input"
-                placeholder="11999999999"
-                inputmode="numeric"
-                autocomplete="tel"
-                required
-              >
-            </div>
-
-            <div class="form-group full-width">
-              <label class="field-label" for="password">
-                Senha
-                <span class="required">*</span>
-              </label>
-              <div class="password-wrapper">
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  class="input"
-                  placeholder="Crie uma senha segura"
-                  autocomplete="new-password"
-                  required
-                >
-                <button type="button" class="password-toggle" data-target="password">
-                  <span class="eye-icon eye-closed"></span>
-                </button>
-              </div>
-
-              <div class="password-rules" id="password-rules">
-                <div class="password-rule" data-rule="letter">
-                  <span class="rule-icon"></span>
-                  <span>Ao menos uma letra</span>
-                </div>
-                <div class="password-rule" data-rule="number">
-                  <span class="rule-icon"></span>
-                  <span>Ao menos um número</span>
-                </div>
-                <div class="password-rule" data-rule="special">
-                  <span class="rule-icon"></span>
-                  <span>Ao menos um caractere especial</span>
-                </div>
-                <div class="password-rule" data-rule="length">
-                  <span class="rule-icon"></span>
-                  <span>Pelo menos 8 caracteres</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-group full-width">
-              <label class="field-label" for="confirmPassword">
-                Confirme a senha
-                <span class="required">*</span>
-              </label>
-              <div class="password-wrapper">
-                <input
-                  id="confirmPassword"
-                  name="confirmPassword"
-                  type="password"
-                  class="input"
-                  placeholder="Repita a mesma senha"
-                  autocomplete="new-password"
-                  required
-                >
-                <button type="button" class="password-toggle" data-target="confirmPassword">
-                  <span class="eye-icon eye-closed"></span>
-                </button>
-              </div>
-              <p class="password-match-message" id="password-match-message">
-                As senhas não correspondem. Verifique se estão iguais.
-              </p>
-            </div>
-
-            <div class="form-group">
-              <label class="field-label" for="birthDate">
-                Data de nascimento
-                <span class="required">*</span>
-              </label>
-              <div class="date-wrapper">
-                <input
-                  id="birthDate"
-                  name="birthDate"
-                  type="text"
-                  class="input"
-                  placeholder="dd/mm/aaaa"
-                  autocomplete="bday"
-                  maxlength="10"
-                  required
-                >
-                <span class="date-icon"></span>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="field-label" for="nationality">
-                Nacionalidade(s)
-                <span class="required">*</span>
-              </label>
-              <select
-                id="nationality"
-                name="nationality"
-                class="input select"
-                multiple
-              >
-                <option value="" disabled>Selecione</option>
-                <option value="alemao">Alemão/Alemã</option>
-                <option value="americano">Americano/Americana</option>
-                <option value="argentino">Argentino/Argentina</option>
-                <option value="brasileiro">Brasileiro/Brasileira</option>
-                <option value="canadense">Canadense</option>
-                <option value="chileno">Chileno/Chilena</option>
-                <option value="chines">Chinês/Chinesa</option>
-                <option value="espanhol">Espanhol/Espanhola</option>
-                <option value="frances">Francês/Francesa</option>
-                <option value="indiano">Indiano/Indiana</option>
-                <option value="italiano">Italiano/Italiana</option>
-                <option value="japones">Japonês/Japonesa</option>
-                <option value="mexicano">Mexicano/Mexicana</option>
-                <option value="portugues">Português/Portuguesa</option>
-                <option value="russo">Russo/Russa</option>
-                <option value="sueco">Sueco/Sueca</option>
-                <option value="suico">Suíço/Suíça</option>
-                <option value="outro">Outro(a)</option>
-              </select>
-              <span class="field-hint">É possível selecionar mais de uma opção.</span>
-
-              <div class="form-group nationality-custom" id="nationality-custom-wrapper">
-                <label class="field-label" for="nationalityCustom">Digite sua nacionalidade</label>
-                <input
-                  id="nationalityCustom"
-                  name="nationalityCustom"
-                  type="text"
-                  class="input"
-                  placeholder="Informe sua nacionalidade"
-                  maxlength="30"
-                >
-              </div>
-            </div>
-
-            <div class="form-group full-width">
-              <label class="field-label" for="referenceCode">
-                Código de referência
-              </label>
-              <input
-                id="referenceCode"
-                name="referenceCode"
-                type="text"
-                class="input"
-                readonly
-              >
-              <span class="field-hint">
-                Gerado automaticamente para fins de demonstração.
-              </span>
+        <form data-form-register class="form">
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="fullName">Nome completo</label>
+              <input class="form-control" id="fullName" name="fullName" type="text" placeholder="Seu nome completo">
             </div>
           </div>
 
-          <label class="checkbox-row">
-            <input type="checkbox" id="terms" name="terms" required>
-            <span class="checkbox-fake"></span>
-            <span class="checkbox-text">
-              Confirmo que <span class="highlight-text">tenho mais de 18 anos</span> e aceito os
-              <a href="#" class="text-link">Termos de Condição</a> e a
-              <a href="#" class="text-link">Política de Privacidade</a>.
-            </span>
-          </label>
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="birthDate">Data de nascimento</label>
+              <input class="form-control" id="birthDate" name="birthDate" type="date">
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="cpf">CPF</label>
+              <input class="form-control" id="cpf" name="cpf" type="text" placeholder="00000000000">
+              <span class="form-hint">Apenas números.</span>
+            </div>
+          </div>
 
-          <button type="submit" class="btn btn-primary btn-full">
-            Concluir registro
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="phone">Telefone</label>
+              <input class="form-control" id="phone" name="phone" type="text" placeholder="11999999999">
+              <span class="form-hint">DDD + número, apenas dígitos.</span>
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="email">E-mail</label>
+              <input class="form-control" id="email" name="email" type="email" placeholder="voce@exemplo.com">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="password">Senha</label>
+              <input class="form-control" id="password" name="password" type="password" placeholder="Senha forte">
+              <span class="form-hint">Use letras, números e símbolos.</span>
+            </div>
+          </div>
+
+          <div class="form-error" data-feedback-error></div>
+          <div class="form-success" data-feedback-success></div>
+
+          <button class="btn btn-primary btn-full" type="submit" style="margin-top:10px;">
+            Continuar para verificação
           </button>
 
-          <p class="register-disclaimer">
-            Dados armazenados apenas localmente (SQLite) para fins de estudo.
-          </p>
+          <div class="form-footer">
+            Já tem conta?
+            <a href="./login.html" class="link-inline">Entrar</a>
+          </div>
         </form>
+
+        <div class="auth-meta">
+          <span>Dados armazenados apenas localmente (SQLite) para fins de estudo.</span>
+          <span class="badge-tag">Portfólio · Fake Betting</span>
+        </div>
       </div>
     </section>
-  </main>
+
+    <section>
+      <div class="hero-mock">
+        <div class="hero-mock-header">
+          <span>Resumo da conta</span>
+          <span class="chip">simulação</span>
+        </div>
+        <div class="hero-mock-slots-row">
+          <div class="slot-card">
+            <div class="slot-card-title">Verificação de e-mail</div>
+            <div class="slot-card-odds">Código de 6 dígitos enviado via SMTP.</div>
+          </div>
+        </div>
+        <p class="text-muted" style="margin-top:12px; font-size:12px;">
+          Após o cadastro, um código é enviado para o e-mail informado. Somente contas verificadas
+          podem fazer login e acessar o dashboard de slots.
+        </p>
+      </div>
+    </section>
+  </div>
 
   <script src="../assets/js/auth.js"></script>
 </body>
