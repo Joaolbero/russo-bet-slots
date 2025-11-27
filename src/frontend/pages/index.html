@@ -9,85 +9,317 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
 </head>
 <body class="page page-center" data-page="home">
-  <div class="page-grid page-grid-auth">
-    <section>
-      <div class="brand">
-        <div class="brand-logo">
-          <span>RB</span>
+  <div class="page">
+    <header class="card-glass" style="margin-bottom:18px;">
+      <div class="card-header">
+        <div class="brand">
+          <div class="brand-logo">
+            <span>RB</span>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">RUSSO BET SLOTS</span>
+            <span class="brand-subtitle">PLATAFORMA FAKE · SOMENTE DEMO</span>
+          </div>
         </div>
-        <div class="brand-text">
-          <span class="brand-title">RUSSO BET SLOTS</span>
-          <span class="brand-subtitle">FAKE PORTFOLIO PLATFORM</span>
+        <div style="display:flex; align-items:center; gap:10px;">
+          <button class="btn btn-ghost btn-sm" type="button" onclick="scrollToSignup()">
+            Entrar
+          </button>
+          <button class="btn btn-primary btn-sm" type="button" onclick="scrollToSignup()">
+            Registre-se
+          </button>
         </div>
       </div>
+    </header>
 
-      <div class="card-glass card-glass-strong" style="margin-top:18px;">
-        <div class="card-header">
+    <main class="site-shell">
+      <section class="site-banner">
+        <div class="site-banner-footer">
+          Aqui você enxerga um “lobby” de jogos fictícios. Apostas e saldos são apenas simulações
+          para estudo e portfólio, sem dinheiro real envolvido.
+        </div>
+      </section>
+
+      <section id="signup-modal" class="modal-card-signup">
+        <div class="modal-signup-top-meta">
+          <button class="btn btn-ghost btn-sm" type="button">
+            Precisa de ajuda?
+          </button>
           <div>
-            <div class="chip-live">
-              <span class="chip-live-dot"></span>
-              <span>beta fake</span>
+            <span style="font-size:11px; color:var(--text-muted);">Já tem uma conta?</span>
+            <button class="btn btn-ghost btn-sm" type="button" onclick="scrollToLogin()">
+              Faça login aqui
+            </button>
+          </div>
+        </div>
+
+        <div class="modal-signup-header">
+          <div>
+            <div class="modal-signup-title">Criar conta</div>
+            <div class="modal-signup-subtitle">
+              Preencha seus dados para liberar o acesso aos slots fake da Russo Bet.
             </div>
-            <h1 class="heading-main">
-              Slots roxos, <span>glow controlado</span> e 2FA de respeito.
-            </h1>
-            <p class="text-muted">
-              Projeto de portfólio inspirado em casas de apostas, com autenticação completa,
-              verificação por e-mail e painel protegido. Nada de dinheiro real aqui.
-            </p>
           </div>
-        </div>
-
-        <div class="grid-cta">
-          <button class="btn btn-primary" onclick="window.location.href='./register.html'">
-            Criar conta
-          </button>
-          <button class="btn btn-ghost" onclick="window.location.href='./login.html'">
-            Já tenho conta
+          <button class="modal-signup-close" type="button" onclick="closeSignupModal()">
+            ×
           </button>
         </div>
 
-        <div class="pill-stack">
-          <span class="badge-tag">2FA por e-mail</span>
-          <span class="badge-tag">JWT protegido</span>
-          <span class="badge-tag">Node + Express + SQLite</span>
-        </div>
-      </div>
-    </section>
+        <form data-form-register class="form">
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label label-required" for="fullName">Nome completo</label>
+              <input class="form-control" id="fullName" name="fullName" type="text" placeholder="Seu nome completo">
+            </div>
+          </div>
 
-    <section>
-      <div class="hero-mock">
-        <div class="hero-mock-header">
-          <span style="font-size:12px; opacity:0.9;">Slots em destaque</span>
-          <span class="chip">Modo demonstração</span>
-        </div>
-        <div class="hero-mock-slots-row" data-slot-row>
-          <div class="slot-card">
-            <div class="slot-card-title">Roxo do Timão</div>
-            <div class="slot-card-odds">Volatilidade: Média</div>
-            <div class="slot-card-pill" data-slot-cell>💎</div>
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label label-required" for="cpf">CPF</label>
+              <input class="form-control" id="cpf" name="cpf" type="text" placeholder="00000000000">
+              <span class="form-hint">Apenas números.</span>
+            </div>
           </div>
-          <div class="slot-card">
-            <div class="slot-card-title">Neon Insano</div>
-            <div class="slot-card-odds">Volatilidade: Alta</div>
-            <div class="slot-card-pill" data-slot-cell>⭐</div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label label-required" for="email">E-mail</label>
+              <div>
+                <input class="form-control" id="email" name="email" type="email" placeholder="voce@exemplo.com">
+                <span class="tooltip-icon">
+                  i
+                  <span>Digite um e-mail válido. Será necessário verificá-lo posteriormente.</span>
+                </span>
+              </div>
+            </div>
           </div>
-          <div class="slot-card">
-            <div class="slot-card-title">Corinthians Picks</div>
-            <div class="slot-card-odds">Retorno simulado</div>
-            <div class="slot-card-pill" data-slot-cell>🍀</div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label label-required" for="phone">Telefone</label>
+              <div>
+                <input class="form-control" id="phone" name="phone" type="text" placeholder="11999999999">
+                <span class="tooltip-icon">
+                  i
+                  <span>Digite um telefone válido. Será necessário verificá-lo posteriormente.</span>
+                </span>
+              </div>
+            </div>
           </div>
-        </div>
-        <button class="btn btn-sm btn-primary" style="margin-top:10px;" data-slot-spin>
-          Girar demo
-        </button>
-        <p class="text-muted" style="margin-top:10px; font-size:11px;">
-          Este projeto é apenas para fins educacionais e de portfólio. Nenhuma aposta real é processada.
-        </p>
-      </div>
-    </section>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label label-required" for="password">Senha</label>
+              <div style="position:relative;">
+                <input class="form-control" id="password" name="password" type="password" placeholder="Crie uma senha segura">
+                <button type="button" id="togglePassword" class="btn btn-ghost btn-sm" style="position:absolute; right:4px; top:4px; padding:4px 10px;">
+                  Ver
+                </button>
+              </div>
+              <div class="password-rules" id="passwordRules">
+                <div class="password-rule">
+                  <span class="password-rule-icon" data-rule-letter>×</span>
+                  <span>Ao menos uma letra</span>
+                </div>
+                <div class="password-rule">
+                  <span class="password-rule-icon" data-rule-number>×</span>
+                  <span>Ao menos um número</span>
+                </div>
+                <div class="password-rule">
+                  <span class="password-rule-icon" data-rule-special>×</span>
+                  <span>Ao menos um caractere especial</span>
+                </div>
+                <div class="password-rule">
+                  <span class="password-rule-icon" data-rule-length>×</span>
+                  <span>Pelo menos 8 caracteres</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="birthDate">Data de nascimento</label>
+              <input class="form-control" id="birthDate" name="birthDate" type="date">
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="nationality">Nacionalidade(s)</label>
+              <select class="form-control nationality-select" id="nationality" name="nationality" multiple>
+                <option value="alemaoa">Alemão(ã)</option>
+                <option value="americanoa">Americano(a)</option>
+                <option value="argentinoa">Argentino(a)</option>
+                <option value="brasileiroa">Brasileiro(a)</option>
+                <option value="canadense">Canadense</option>
+                <option value="chilenoa">Chileno(a)</option>
+                <option value="chinesa">Chinês(Chinesa)</option>
+                <option value="espanhola">Espanhol(a)</option>
+                <option value="francesa">Francês(Francesa)</option>
+                <option value="indiana">Indiano(a)</option>
+                <option value="italiana">Italiano(a)</option>
+                <option value="japonesa">Japonês(Japonesa)</option>
+                <option value="mexicanoa">Mexicano(a)</option>
+                <option value="portuguesa">Português(Portuguesa)</option>
+                <option value="russoa">Russo(a)</option>
+                <option value="suecoa">Sueco(a)</option>
+                <option value="suicoa">Suíço(a)</option>
+                <option value="outroa">Outro(a)</option>
+              </select>
+              <span class="form-hint">É possível selecionar mais de uma opção.</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="refCode">Código de referência</label>
+              <input class="form-control" id="refCode" name="refCode" type="text" readonly>
+              <span class="form-hint">Gerado automaticamente para fins de demonstração.</span>
+            </div>
+          </div>
+
+          <div class="checkbox-row">
+            <input type="checkbox" id="termsCheck">
+            <label for="termsCheck">
+              Confirmo que <a href="#" onclick="openTerms(event)">tenho mais de 18 anos</a> e aceito os
+              <a href="#" onclick="openTerms(event)">Termos de Condição</a> e a
+              <a href="#" onclick="openPrivacy(event)">Política de Privacidade</a>.
+            </label>
+          </div>
+
+          <div class="form-error" data-feedback-error></div>
+          <div class="form-success" data-feedback-success></div>
+
+          <button class="btn btn-primary btn-full" type="submit" style="margin-top:12px;">
+            Concluir registro
+          </button>
+        </form>
+      </section>
+    </main>
   </div>
 
-  <script src="../assets/js/slots.js"></script>
+  <div class="overlay-age" id="ageGate">
+    <div class="modal-age">
+      <div class="modal-age-header">
+        Você tem mais de 18 anos?
+      </div>
+      <div class="modal-age-body">
+        O conteúdo desta plataforma fake simula uma casa de apostas e é indicado apenas para maiores de idade.
+      </div>
+      <div class="modal-age-actions">
+        <button class="btn btn-ghost" type="button" onclick="underAge()">
+          Não
+        </button>
+        <button class="btn btn-primary" type="button" onclick="confirmAge()">
+          Sim
+        </button>
+      </div>
+      <div class="modal-age-note">
+        Nenhuma transação real é processada. Projeto exclusivo para estudo e portfólio.
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/auth.js"></script>
+  <script>
+    const ageGate = document.getElementById("ageGate");
+
+    const confirmAge = () => {
+      if (ageGate) {
+        ageGate.style.display = "none";
+      }
+    };
+
+    const underAge = () => {
+      if (!ageGate) return;
+      const modal = ageGate.querySelector(".modal-age-body");
+      if (modal) {
+        modal.textContent = "Desculpe. Este conteúdo é restrito para maiores de 18 anos. Feche esta aba e volte quando atingir a maioridade.";
+      }
+    };
+
+    const scrollToSignup = () => {
+      const el = document.getElementById("signup-modal");
+      if (!el) return;
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+
+    const scrollToLogin = () => {
+      scrollToSignup();
+    };
+
+    const closeSignupModal = () => {
+      const el = document.getElementById("signup-modal");
+      if (!el) return;
+      el.style.display = "none";
+    };
+
+    const openTerms = (event) => {
+      event.preventDefault();
+      alert("Aqui entrarão os Termos de Condição em uma próxima etapa.");
+    };
+
+    const openPrivacy = (event) => {
+      event.preventDefault();
+      alert("Aqui entrará a Política de Privacidade em uma próxima etapa.");
+    };
+
+    const generateRefCode = () => {
+      const input = document.getElementById("refCode");
+      if (!input) return;
+      const code = Math.random().toString(16).slice(2, 14);
+      input.value = code;
+    };
+
+    const setupPasswordHelpers = () => {
+      const input = document.getElementById("password");
+      const btnToggle = document.getElementById("togglePassword");
+      const iconLetter = document.querySelector("[data-rule-letter]");
+      const iconNumber = document.querySelector("[data-rule-number]");
+      const iconSpecial = document.querySelector("[data-rule-special]");
+      const iconLength = document.querySelector("[data-rule-length]");
+
+      if (!input) return;
+
+      if (btnToggle) {
+        btnToggle.addEventListener("click", () => {
+          if (input.type === "password") {
+            input.type = "text";
+            btnToggle.textContent = "Ocultar";
+          } else {
+            input.type = "password";
+            btnToggle.textContent = "Ver";
+          }
+        });
+      }
+
+      const updateRuleIcon = (icon, ok) => {
+        if (!icon) return;
+        if (ok) {
+          icon.classList.add("ok");
+          icon.textContent = "✓";
+        } else {
+          icon.classList.remove("ok");
+          icon.textContent = "×";
+        }
+      };
+
+      input.addEventListener("input", () => {
+        const value = input.value || "";
+        const hasLetter = /[A-Za-z]/.test(value);
+        const hasNumber = /[0-9]/.test(value);
+        const hasSpecial = /[^A-Za-z0-9]/.test(value);
+        const hasLength = value.length >= 8;
+
+        updateRuleIcon(iconLetter, hasLetter);
+        updateRuleIcon(iconNumber, hasNumber);
+        updateRuleIcon(iconSpecial, hasSpecial);
+        updateRuleIcon(iconLength, hasLength);
+      });
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+      generateRefCode();
+      setupPasswordHelpers();
+    });
+  </script>
 </body>
 </html>
