@@ -167,6 +167,8 @@ body {
   border: 1px solid var(--border-soft);
   box-shadow: var(--shadow-soft);
   padding: 20px 20px 18px;
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
 .modal-signup-top-meta {
@@ -175,6 +177,12 @@ body {
   justify-content: space-between;
   margin-bottom: 10px;
   font-size: 11px;
+}
+
+.modal-signup-top-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .modal-signup-header {
@@ -199,7 +207,12 @@ body {
   background: transparent;
   color: var(--text-muted);
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
+  padding: 0 4px;
+}
+
+.modal-signup-close:hover {
+  color: var(--text-main);
 }
 
 .form {
@@ -230,6 +243,12 @@ body {
 .label-required::after {
   content: " *";
   color: var(--danger);
+}
+
+.label-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .form-control {
