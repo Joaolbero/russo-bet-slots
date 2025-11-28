@@ -301,6 +301,7 @@ select.form-control option {
 /* TOOLTIP "i" – ESTILO CÍRCULO CLÁSSICO */
 
 /* TOOLTIP "i" – CÍRCULO CLÁSSICO CENTRALIZADO */
+/* TOOLTIP "i" – CÍRCULO CLÁSSICO CENTRALIZADO */
 .tooltip-icon {
   position: relative;
   display: inline-flex;
@@ -315,9 +316,10 @@ select.form-control option {
   line-height: 1;
   background: transparent;
   flex-shrink: 0;
+  text-transform: none; /* deixa o "i" minúsculo mesmo com o label em UPPERCASE */
 }
 
-/* Balão de texto, alinhado embaixo do "i" e sem caps lock */
+/* Balão de texto */
 .tooltip-icon span {
   position: absolute;
   top: 135%;
@@ -328,11 +330,12 @@ select.form-control option {
   padding: 6px 10px;
   font-size: 11px;
   border-radius: 999px;
-  white-space: nowrap;
+  max-width: 260px;        /* limita a largura */
+  white-space: normal;     /* permite quebrar linha */
+  text-align: left;
   opacity: 0;
   pointer-events: none;
   transition: opacity 160ms ease-out;
-  text-transform: none;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
   z-index: 10;
 }
