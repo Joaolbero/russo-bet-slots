@@ -246,10 +246,9 @@ body {
 
 /* label com ícone de info à direita */
 .label-with-icon {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 8px;
+  gap: 4px;
 }
 
 /* texto “E-mail *” / “Telefone *” agrupado */
