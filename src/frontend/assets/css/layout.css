@@ -300,6 +300,7 @@ select.form-control option {
 
 /* TOOLTIP "i" – ESTILO CÍRCULO CLÁSSICO */
 
+/* TOOLTIP "i" – CÍRCULO CLÁSSICO CENTRALIZADO */
 .tooltip-icon {
   position: relative;
   display: inline-flex;
@@ -308,7 +309,7 @@ select.form-control option {
   width: 18px;
   height: 18px;
   border-radius: 999px;
-  border: 1px solid var(--success);
+  border: 2px solid var(--success);
   color: var(--success);
   font-size: 11px;
   line-height: 1;
@@ -316,11 +317,12 @@ select.form-control option {
   flex-shrink: 0;
 }
 
+/* Balão de texto, alinhado embaixo do "i" e sem caps lock */
 .tooltip-icon span {
   position: absolute;
-  top: 140%;
-  right: 0;
-  transform: translateX(0);
+  top: 135%;
+  left: 50%;
+  transform: translateX(-50%);
   background: var(--success);
   color: #020617;
   padding: 6px 10px;
