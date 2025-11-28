@@ -303,37 +303,37 @@ select.form-control option {
 /* TOOLTIP "i" – CÍRCULO CLÁSSICO CENTRALIZADO */
 /* TOOLTIP "i" – CÍRCULO CLÁSSICO CENTRALIZADO */
 /* TOOLTIP "i" – estilo clássico, pequeno, equilibrado */
+/* TOOLTIP "i" – ícone roxo + balão roxo sem quebra de linha */
 .tooltip-icon {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 15px;              /* menor */
-  height: 15px;             /* menor */
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
-  border: 2px solid var(--success);
-  color: var(--success);
-  font-size: 10px;          /* i pequeno */
+  border: 2px solid var(--accent);   /* roxo do tema */
+  color: var(--accent);              /* roxo do tema */
+  font-size: 10px;                   /* i minúsculo, proporcional */
   line-height: 1;
   background: transparent;
   flex-shrink: 0;
-  text-transform: none;     /* impede o uppercase do label */
+  text-transform: none;
   cursor: default;
 }
 
-/* BALÃO – estilo antigo, pílula, abrindo para a direita */
+/* Balão roxo, texto branco, em linha única abrindo pra direita */
 .tooltip-icon span {
   position: absolute;
   top: 50%;
-  left: 120%;                 /* abre para a direita */
+  left: 120%;                        /* abre pra direita */
   transform: translateY(-50%);
-  background: var(--success);
-  color: #020617;
-  padding: 8px 12px;          /* mais confortável e uniforme */
+  background: var(--accent);         /* fundo roxo */
+  color: #f9fafb;                    /* texto branco */
+  padding: 6px 14px;
   font-size: 11px;
-  border-radius: 30px;        /* formato pílula */
-  white-space: normal;        /* permite mais de uma linha */
-  max-width: 240px;           /* não fica gigante */
+  border-radius: 999px;              /* pílula */
+  white-space: nowrap;               /* NÃO quebra linha */
   text-align: left;
   opacity: 0;
   visibility: hidden;
