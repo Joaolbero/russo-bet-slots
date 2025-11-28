@@ -1,437 +1,443 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8">
-    <title>Russo Bet Slots</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="../assets/icons/favicon.png">
-    <link rel="stylesheet" href="../assets/css/base.css">
-    <link rel="stylesheet" href="../assets/css/layout.css">
-  </head>
-  <body class="page-center" data-page="home">
-    <div class="page">
-      <header class="card-glass">
-        <div class="card-header">
-          <div class="brand">
-            <div class="brand-logo">
-              <span>RB</span>
-            </div>
-            <div class="brand-text">
-              <span class="brand-title">RUSSO BET SLOTS</span>
-              <span class="brand-subtitle">Russo Bet · Slots & Apostas</span>
-            </div>
+
+<head>
+  <meta charset="utf-8">
+  <title>Russo Bet Slots</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="../assets/icons/favicon.png">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+</head>
+
+<body class="page-center" data-page="home">
+  <div class="page">
+    <header class="card-glass">
+      <div class="card-header">
+        <div class="brand">
+          <div class="brand-logo">
+            <span>RB</span>
           </div>
-          <div style="display:flex; align-items:center; gap:10px;">
-            <button class="btn btn-ghost btn-sm" type="button" onclick="scrollToSignup()">
-              Entrar
-            </button>
-            <button class="btn btn-primary btn-sm" type="button" onclick="scrollToSignup()">
-              Registre-se
-            </button>
+          <div class="brand-text">
+            <span class="brand-title">RUSSO BET SLOTS</span>
+            <span class="brand-subtitle">Russo Bet · Slots & Apostas</span>
           </div>
         </div>
-      </header>
-
-      <main class="site-shell">
-        <section class="site-banner">
-          <div class="site-banner-footer">
-            Slots em modo demonstração. Nenhuma transação financeira real é processada.
-          </div>
-        </section>
-
-        <section id="signup-modal" class="modal-card-signup">
-          <div class="modal-signup-top-meta">
-            <button class="btn btn-ghost btn-sm" type="button">
-              Precisa de ajuda?
-            </button>
-            <div class="modal-signup-top-right">
-              <span style="font-size:11px; color:var(--text-muted);">Já tem uma conta?</span>
-              <button class="btn btn-ghost btn-sm" type="button" onclick="scrollToLogin()">
-                Faça login aqui
-              </button>
-              <button class="modal-signup-close" type="button" onclick="closeSignupModal()">
-                ×
-              </button>
-            </div>
-          </div>
-
-          <div class="modal-signup-header">
-            <div>
-              <div class="modal-signup-title">Criar conta</div>
-              <div class="modal-signup-subtitle">
-                Preencha seus dados para liberar o acesso aos slots da Russo Bet.
-              </div>
-            </div>
-          </div>
-
-          <form data-form-register class="form">
-            <div class="form-row">
-              <div class="form-field">
-                <label class="form-label" for="fullName">
-                  Nome completo <span class="required-star">*</span>
-                </label>
-                <input class="form-control" id="fullName" name="fullName" type="text" placeholder="Seu nome completo">
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-field">
-                <label class="form-label" for="cpf">
-                  CPF <span class="required-star">*</span>
-                </label>
-                <input class="form-control" id="cpf" name="cpf" type="text" placeholder="000.000.000-00">
-                <span class="form-hint">Apenas números.</span>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-field">
-                <label class="form-label label-with-icon" for="email">
-  E-mail <span class="required-star">*</span>
-  <span class="tooltip-icon">
-    i
-    <span>Digite um e-mail válido. Será necessário verificá-lo posteriormente.</span>
-  </span>
-</label>
-
-                <input class="form-control" id="email" name="email" type="email" placeholder="voce@exemplo.com">
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-field">
-                <label class="form-label label-with-icon" for="phone">
-  Telefone <span class="required-star">*</span>
-  <span class="tooltip-icon">
-    i
-    <span>Digite um telefone válido. Será necessário verificá-lo posteriormente.</span>
-  </span>
-</label>
-
-                <input class="form-control" id="phone" name="phone" type="text" placeholder="11999999999">
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-field">
-                <label class="form-label" for="password">
-                  Senha <span class="required-star">*</span>
-                </label>
-                <div class="password-wrapper">
-                  <input class="form-control" id="password" name="password" type="password" placeholder="Crie uma senha segura">
-                  <button type="button" id="togglePassword" class="password-eye">
-                    👁️‍🗨️
-                  </button>
-                </div>
-                <div class="password-rules" id="passwordRules">
-                  <div class="password-rule">
-                    <span class="password-rule-icon" data-rule-letter>×</span>
-                    <span>Ao menos uma letra</span>
-                  </div>
-                  <div class="password-rule">
-                    <span class="password-rule-icon" data-rule-number>×</span>
-                    <span>Ao menos um número</span>
-                  </div>
-                  <div class="password-rule">
-                    <span class="password-rule-icon" data-rule-special>×</span>
-                    <span>Ao menos um caractere especial</span>
-                  </div>
-                  <div class="password-rule">
-                    <span class="password-rule-icon" data-rule-length>×</span>
-                    <span>Pelo menos 8 caracteres</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-field">
-                <label class="form-label" for="confirmPassword">
-                  Confirme a senha <span class="required-star">*</span>
-                </label>
-                <div class="password-wrapper">
-                  <input class="form-control" id="confirmPassword" name="confirmPassword" type="password" placeholder="Repita a mesma senha">
-                  <button type="button" id="toggleConfirmPassword" class="password-eye">
-                    👁️‍🗨️
-                  </button>
-                </div>
-                <div class="form-error" id="passwordMismatch" style="display:none;"></div>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-field">
-                <label class="form-label" for="birthDate">Data de nascimento</label>
-                <input class="form-control" id="birthDate" name="birthDate" type="date">
-              </div>
-              <div class="form-field">
-                <label class="form-label" for="nationality">Nacionalidade</label>
-                <select class="form-control" id="nationality" name="nationality">
-                  <option value="">Selecione</option>
-                  <option value="alemaoa">Alemão/Alemã</option>
-                  <option value="americanoa">Americano/Americana</option>
-                  <option value="argentinoa">Argentino/Argentina</option>
-                  <option value="brasileiroa">Brasileiro/Brasileira</option>
-                  <option value="canadense">Canadense</option>
-                  <option value="chilenoa">Chileno/Chilena</option>
-                  <option value="chinesa">Chinês/Chinesa</option>
-                  <option value="espanhola">Espanhol/Espanhola</option>
-                  <option value="francesa">Francês/Francesa</option>
-                  <option value="indiana">Indiano/Indiana</option>
-                  <option value="italiana">Italiano/Italiana</option>
-                  <option value="japonesa">Japonês/Japonesa</option>
-                  <option value="mexicanoa">Mexicano/Mexicana</option>
-                  <option value="portuguesa">Português/Portuguesa</option>
-                  <option value="russoa">Russo/Russa</option>
-                  <option value="suecoa">Sueco/Sueca</option>
-                  <option value="suicoa">Suíço/Suíça</option>
-                  <option value="outroa">Outro(a)</option>
-                </select>
-                <input class="form-control" id="nationalityOther" name="nationalityOther" type="text" placeholder="Digite sua nacionalidade" style="margin-top:6px; display:none;">
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-field">
-                <label class="form-label" for="refCode">Código de referência</label>
-                <input class="form-control" id="refCode" name="refCode" type="text" readonly>
-                <span class="form-hint">Gerado automaticamente para fins de demonstração.</span>
-              </div>
-            </div>
-
-            <div class="checkbox-row">
-              <input type="checkbox" id="termsCheck">
-              <label for="termsCheck">
-                Confirmo que <span class="link-inline-plain">tenho mais de 18 anos</span> e aceito os
-                <a href="#" onclick="openTerms(event)">Termos de Condição</a> e a
-                <a href="#" onclick="openPrivacy(event)">Política de Privacidade</a>.
-              </label>
-            </div>
-
-            <div class="form-error" data-feedback-error></div>
-            <div class="form-success" data-feedback-success></div>
-
-            <button class="btn btn-primary btn-full" type="submit" style="margin-top:12px;">
-              Concluir registro
-            </button>
-          </form>
-        </section>
-      </main>
-    </div>
-
-    <div class="overlay-age" id="ageGate">
-      <div class="modal-age">
-        <div class="modal-age-header">
-          Você tem mais de 18 anos?
-        </div>
-        <div class="modal-age-body">
-          O conteúdo desta plataforma simula uma casa de apostas e é indicado apenas para maiores de idade.
-        </div>
-        <div class="modal-age-actions">
-          <button class="btn btn-ghost" type="button" onclick="underAge()">
-            Não
+        <div style="display:flex; align-items:center; gap:10px;">
+          <button class="btn btn-ghost btn-sm" type="button" onclick="scrollToSignup()">
+            Entrar
           </button>
-          <button class="btn btn-primary" type="button" onclick="confirmAge()">
-            Sim
+          <button class="btn btn-primary btn-sm" type="button" onclick="scrollToSignup()">
+            Registre-se
           </button>
-        </div>
-        <div class="modal-age-note">
-          Nenhuma transação financeira real é processada.
         </div>
       </div>
+    </header>
+
+    <main class="site-shell">
+      <section class="site-banner">
+        <div class="site-banner-footer">
+          Slots em modo demonstração. Nenhuma transação financeira real é processada.
+        </div>
+      </section>
+
+      <section id="signup-modal" class="modal-card-signup">
+        <div class="modal-signup-top-meta">
+          <button class="btn btn-ghost btn-sm" type="button">
+            Precisa de ajuda?
+          </button>
+          <div class="modal-signup-top-right">
+            <span style="font-size:11px; color:var(--text-muted);">Já tem uma conta?</span>
+            <button class="btn btn-ghost btn-sm" type="button" onclick="scrollToLogin()">
+              Faça login aqui
+            </button>
+            <button class="modal-signup-close" type="button" onclick="closeSignupModal()">
+              ×
+            </button>
+          </div>
+        </div>
+
+        <div class="modal-signup-header">
+          <div>
+            <div class="modal-signup-title">Criar conta</div>
+            <div class="modal-signup-subtitle">
+              Preencha seus dados para liberar o acesso aos slots da Russo Bet.
+            </div>
+          </div>
+        </div>
+
+        <form data-form-register class="form">
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="fullName">
+                Nome completo <span class="required-star">*</span>
+              </label>
+              <input class="form-control" id="fullName" name="fullName" type="text" placeholder="Seu nome completo">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="cpf">
+                CPF <span class="required-star">*</span>
+              </label>
+              <input class="form-control" id="cpf" name="cpf" type="text" placeholder="000.000.000-00">
+              <span class="form-hint">Apenas números.</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label label-with-icon" for="email">
+                E-mail <span class="required-star">*</span>
+                <span class="tooltip-icon">
+                  i
+                  <span>Digite um e-mail válido. Será necessário verificá-lo posteriormente.</span>
+                </span>
+              </label>
+
+              <input class="form-control" id="email" name="email" type="email" placeholder="voce@exemplo.com">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label label-with-icon" for="phone">
+                Telefone <span class="required-star">*</span>
+                <span class="tooltip-icon">
+                  i
+                  <span>Digite um telefone válido. Será necessário verificá-lo posteriormente.</span>
+                </span>
+              </label>
+
+              <input class="form-control" id="phone" name="phone" type="text" placeholder="11999999999">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="password">
+                Senha <span class="required-star">*</span>
+              </label>
+              <div class="password-wrapper">
+                <input class="form-control" id="password" name="password" type="password"
+                  placeholder="Crie uma senha segura">
+                <button type="button" id="togglePassword" class="password-eye">
+                  👁️‍🗨️
+                </button>
+              </div>
+              <div class="password-rules" id="passwordRules">
+                <div class="password-rule">
+                  <span class="password-rule-icon" data-rule-letter>×</span>
+                  <span>Ao menos uma letra</span>
+                </div>
+                <div class="password-rule">
+                  <span class="password-rule-icon" data-rule-number>×</span>
+                  <span>Ao menos um número</span>
+                </div>
+                <div class="password-rule">
+                  <span class="password-rule-icon" data-rule-special>×</span>
+                  <span>Ao menos um caractere especial</span>
+                </div>
+                <div class="password-rule">
+                  <span class="password-rule-icon" data-rule-length>×</span>
+                  <span>Pelo menos 8 caracteres</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="confirmPassword">
+                Confirme a senha <span class="required-star">*</span>
+              </label>
+              <div class="password-wrapper">
+                <input class="form-control" id="confirmPassword" name="confirmPassword" type="password"
+                  placeholder="Repita a mesma senha">
+                <button type="button" id="toggleConfirmPassword" class="password-eye">
+                  👁️‍🗨️
+                </button>
+              </div>
+              <div class="form-error" id="passwordMismatch" style="display:none;"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="birthDate">Data de nascimento</label>
+              <input class="form-control" id="birthDate" name="birthDate" type="date">
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="nationality">Nacionalidade</label>
+              <select class="form-control" id="nationality" name="nationality">
+                <option value="">Selecione</option>
+                <option value="alemaoa">Alemão/Alemã</option>
+                <option value="americanoa">Americano/Americana</option>
+                <option value="argentinoa">Argentino/Argentina</option>
+                <option value="brasileiroa">Brasileiro/Brasileira</option>
+                <option value="canadense">Canadense</option>
+                <option value="chilenoa">Chileno/Chilena</option>
+                <option value="chinesa">Chinês/Chinesa</option>
+                <option value="espanhola">Espanhol/Espanhola</option>
+                <option value="francesa">Francês/Francesa</option>
+                <option value="indiana">Indiano/Indiana</option>
+                <option value="italiana">Italiano/Italiana</option>
+                <option value="japonesa">Japonês/Japonesa</option>
+                <option value="mexicanoa">Mexicano/Mexicana</option>
+                <option value="portuguesa">Português/Portuguesa</option>
+                <option value="russoa">Russo/Russa</option>
+                <option value="suecoa">Sueco/Sueca</option>
+                <option value="suicoa">Suíço/Suíça</option>
+                <option value="outroa">Outro(a)</option>
+              </select>
+              <input class="form-control" id="nationalityOther" name="nationalityOther" type="text"
+                placeholder="Digite sua nacionalidade" style="margin-top:6px; display:none;">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="refCode">Código de referência</label>
+              <input class="form-control" id="refCode" name="refCode" type="text" readonly>
+              <span class="form-hint">Gerado automaticamente para fins de demonstração.</span>
+            </div>
+          </div>
+
+          <div class="checkbox-row">
+            <input type="checkbox" id="termsCheck">
+            <label for="termsCheck">
+              Confirmo que <span class="link-inline-plain">tenho mais de 18 anos</span> e aceito os
+              <a href="#" onclick="openTerms(event)">Termos de Condição</a> e a
+              <a href="#" onclick="openPrivacy(event)">Política de Privacidade</a>.
+            </label>
+          </div>
+
+          <div class="form-error" data-feedback-error></div>
+          <div class="form-success" data-feedback-success></div>
+
+          <button class="btn btn-primary btn-full" type="submit" style="margin-top:12px;">
+            Concluir registro
+          </button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <div class="overlay-age" id="ageGate">
+    <div class="modal-age">
+      <div class="modal-age-header">
+        Você tem mais de 18 anos?
+      </div>
+      <div class="modal-age-body">
+        O conteúdo desta plataforma simula uma casa de apostas e é indicado apenas para maiores de idade.
+      </div>
+      <div class="modal-age-actions">
+        <button class="btn btn-ghost" type="button" onclick="underAge()">
+          Não
+        </button>
+        <button class="btn btn-primary" type="button" onclick="confirmAge()">
+          Sim
+        </button>
+      </div>
+      <div class="modal-age-note">
+        Nenhuma transação financeira real é processada.
+      </div>
     </div>
+  </div>
 
-    <script src="../assets/js/auth.js"></script>
-    <script>
-      const ageGate = document.getElementById("ageGate");
+  <script src="../assets/js/auth.js"></script>
+  <script>
+    const ageGate = document.getElementById("ageGate");
 
-      const confirmAge = () => {
-        if (ageGate) {
-          ageGate.style.display = "none";
+    const confirmAge = () => {
+      if (ageGate) {
+        ageGate.style.display = "none";
+      }
+    };
+
+    const underAge = () => {
+      if (!ageGate) return;
+      const modal = ageGate.querySelector(".modal-age-body");
+      if (modal) {
+        modal.textContent =
+          "Desculpe. Este conteúdo é restrito para maiores de 18 anos. Feche esta aba ou recarregue a página para sair.";
+      }
+      const actions = ageGate.querySelector(".modal-age-actions");
+      if (actions) {
+        actions.innerHTML = "";
+      }
+    };
+
+    const scrollToSignup = () => {
+      const el = document.getElementById("signup-modal");
+      if (!el) return;
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+
+    const scrollToLogin = () => {
+      scrollToSignup();
+    };
+
+    const closeSignupModal = () => {
+      const el = document.getElementById("signup-modal");
+      if (!el) return;
+      el.style.display = "none";
+    };
+
+    const openTerms = (event) => {
+      event.preventDefault();
+      alert("Aqui entrarão os Termos de Condição em uma próxima etapa.");
+    };
+
+    const openPrivacy = (event) => {
+      event.preventDefault();
+      alert("Aqui entrará a Política de Privacidade em uma próxima etapa.");
+    };
+
+    const generateRefCode = () => {
+      const input = document.getElementById("refCode");
+      if (!input) return;
+      const code = Math.random().toString(16).slice(2, 14);
+      input.value = code;
+    };
+
+    const setupPasswordHelpers = () => {
+      const input = document.getElementById("password");
+      const confirmInput = document.getElementById("confirmPassword");
+      const btnToggle = document.getElementById("togglePassword");
+      const btnToggleConfirm = document.getElementById("toggleConfirmPassword");
+      const iconLetter = document.querySelector("[data-rule-letter]");
+      const iconNumber = document.querySelector("[data-rule-number]");
+      const iconSpecial = document.querySelector("[data-rule-special]");
+      const iconLength = document.querySelector("[data-rule-length]");
+      const form = document.querySelector("[data-form-register]");
+      const errorBox = form ? form.querySelector("[data-feedback-error]") : null;
+      const mismatchBox = document.getElementById("passwordMismatch");
+
+      if (btnToggle && input) {
+        btnToggle.addEventListener("click", () => {
+          input.type = input.type === "password" ? "text" : "password";
+        });
+      }
+
+      if (btnToggleConfirm && confirmInput) {
+        btnToggleConfirm.addEventListener("click", () => {
+          confirmInput.type = confirmInput.type === "password" ? "text" : "password";
+        });
+      }
+
+      const updateRuleIcon = (icon, ok) => {
+        if (!icon) return;
+        if (ok) {
+          icon.classList.add("ok");
+          icon.textContent = "✓";
+        } else {
+          icon.classList.remove("ok");
+          icon.textContent = "×";
         }
       };
 
-      const underAge = () => {
-        if (!ageGate) return;
-        const modal = ageGate.querySelector(".modal-age-body");
-        if (modal) {
-          modal.textContent =
-            "Desculpe. Este conteúdo é restrito para maiores de 18 anos. Feche esta aba ou recarregue a página para sair.";
-        }
-        const actions = ageGate.querySelector(".modal-age-actions");
-        if (actions) {
-          actions.innerHTML = "";
-        }
-      };
-
-      const scrollToSignup = () => {
-        const el = document.getElementById("signup-modal");
-        if (!el) return;
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
-      };
-
-      const scrollToLogin = () => {
-        scrollToSignup();
-      };
-
-      const closeSignupModal = () => {
-        const el = document.getElementById("signup-modal");
-        if (!el) return;
-        el.style.display = "none";
-      };
-
-      const openTerms = (event) => {
-        event.preventDefault();
-        alert("Aqui entrarão os Termos de Condição em uma próxima etapa.");
-      };
-
-      const openPrivacy = (event) => {
-        event.preventDefault();
-        alert("Aqui entrará a Política de Privacidade em uma próxima etapa.");
-      };
-
-      const generateRefCode = () => {
-        const input = document.getElementById("refCode");
+      const updatePasswordRules = () => {
         if (!input) return;
-        const code = Math.random().toString(16).slice(2, 14);
-        input.value = code;
+        const value = input.value || "";
+        const hasLetter = /[A-Za-z]/.test(value);
+        const hasNumber = /[0-9]/.test(value);
+        const hasSpecial = /[^A-Za-z0-9]/.test(value);
+        const hasLength = value.length >= 8;
+
+        updateRuleIcon(iconLetter, hasLetter);
+        updateRuleIcon(iconNumber, hasNumber);
+        updateRuleIcon(iconSpecial, hasSpecial);
+        updateRuleIcon(iconLength, hasLength);
       };
 
-      const setupPasswordHelpers = () => {
-        const input = document.getElementById("password");
-        const confirmInput = document.getElementById("confirmPassword");
-        const btnToggle = document.getElementById("togglePassword");
-        const btnToggleConfirm = document.getElementById("toggleConfirmPassword");
-        const iconLetter = document.querySelector("[data-rule-letter]");
-        const iconNumber = document.querySelector("[data-rule-number]");
-        const iconSpecial = document.querySelector("[data-rule-special]");
-        const iconLength = document.querySelector("[data-rule-length]");
-        const form = document.querySelector("[data-form-register]");
-        const errorBox = form ? form.querySelector("[data-feedback-error]") : null;
-        const mismatchBox = document.getElementById("passwordMismatch");
-
-        if (btnToggle && input) {
-          btnToggle.addEventListener("click", () => {
-            input.type = input.type === "password" ? "text" : "password";
-          });
+      const checkPasswordsMatch = () => {
+        if (!input || !confirmInput || !mismatchBox) return;
+        const value = input.value || "";
+        const confirmValue = confirmInput.value || "";
+        if (confirmValue.length === 0) {
+          mismatchBox.style.display = "none";
+          mismatchBox.textContent = "";
+          return;
         }
-
-        if (btnToggleConfirm && confirmInput) {
-          btnToggleConfirm.addEventListener("click", () => {
-            confirmInput.type = confirmInput.type === "password" ? "text" : "password";
-          });
+        if (value !== confirmValue) {
+          mismatchBox.textContent = "As senhas não correspondem. Verifique se estão iguais.";
+          mismatchBox.style.display = "block";
+        } else {
+          mismatchBox.style.display = "none";
+          mismatchBox.textContent = "";
         }
+      };
 
-        const updateRuleIcon = (icon, ok) => {
-          if (!icon) return;
-          if (ok) {
-            icon.classList.add("ok");
-            icon.textContent = "✓";
-          } else {
-            icon.classList.remove("ok");
-            icon.textContent = "×";
-          }
-        };
+      if (input) {
+        input.addEventListener("input", () => {
+          updatePasswordRules();
+          checkPasswordsMatch();
+        });
+      }
 
-        const updatePasswordRules = () => {
-          if (!input) return;
-          const value = input.value || "";
-          const hasLetter = /[A-Za-z]/.test(value);
-          const hasNumber = /[0-9]/.test(value);
-          const hasSpecial = /[^A-Za-z0-9]/.test(value);
-          const hasLength = value.length >= 8;
+      if (confirmInput) {
+        confirmInput.addEventListener("input", () => {
+          checkPasswordsMatch();
+        });
+      }
 
-          updateRuleIcon(iconLetter, hasLetter);
-          updateRuleIcon(iconNumber, hasNumber);
-          updateRuleIcon(iconSpecial, hasSpecial);
-          updateRuleIcon(iconLength, hasLength);
-        };
-
-        const checkPasswordsMatch = () => {
-          if (!input || !confirmInput || !mismatchBox) return;
-          const value = input.value || "";
-          const confirmValue = confirmInput.value || "";
-          if (confirmValue.length === 0) {
-            mismatchBox.style.display = "none";
-            mismatchBox.textContent = "";
-            return;
-          }
-          if (value !== confirmValue) {
-            mismatchBox.textContent = "As senhas não correspondem. Verifique se estão iguais.";
-            mismatchBox.style.display = "block";
-          } else {
-            mismatchBox.style.display = "none";
-            mismatchBox.textContent = "";
-          }
-        };
-
-        if (input) {
-          input.addEventListener("input", () => {
-            updatePasswordRules();
-            checkPasswordsMatch();
-          });
-        }
-
-        if (confirmInput) {
-          confirmInput.addEventListener("input", () => {
-            checkPasswordsMatch();
-          });
-        }
-
-        if (form && input && confirmInput) {
-          form.addEventListener("submit", (event) => {
-            if (input.value !== confirmInput.value) {
-              if (errorBox) {
-                errorBox.textContent = "As senhas não correspondem.";
-              }
-              confirmInput.focus();
-              event.preventDefault();
+      if (form && input && confirmInput) {
+        form.addEventListener("submit", (event) => {
+          if (input.value !== confirmInput.value) {
+            if (errorBox) {
+              errorBox.textContent = "As senhas não correspondem.";
             }
-          });
-        }
-      };
-
-      const setupCpfMask = () => {
-        const cpfInput = document.getElementById("cpf");
-        if (!cpfInput) return;
-        cpfInput.addEventListener("input", () => {
-          let value = cpfInput.value.replace(/\D/g, "").slice(0, 11);
-          let formatted = "";
-          if (value.length > 0) formatted = value.slice(0, 3);
-          if (value.length >= 4) formatted += "." + value.slice(3, 6);
-          if (value.length >= 7) formatted += "." + value.slice(6, 9);
-          if (value.length >= 10) formatted += "-" + value.slice(9, 11);
-          cpfInput.value = formatted;
-        });
-      };
-
-      const setupNationalityOther = () => {
-        const select = document.getElementById("nationality");
-        const otherInput = document.getElementById("nationalityOther");
-        if (!select || !otherInput) return;
-
-        otherInput.maxLength = 30;
-
-        select.addEventListener("change", () => {
-          if (select.value === "outroa") {
-            otherInput.style.display = "block";
-          } else {
-            otherInput.style.display = "none";
-            otherInput.value = "";
+            confirmInput.focus();
+            event.preventDefault();
           }
         });
+      }
+    };
 
-        otherInput.addEventListener("input", () => {
-          otherInput.value = otherInput.value.replace(/[^A-Za-zÀ-ÿ\s]/g, "");
-        });
-      };
-
-      document.addEventListener("DOMContentLoaded", () => {
-        generateRefCode();
-        setupPasswordHelpers();
-        setupCpfMask();
-        setupNationalityOther();
+    const setupCpfMask = () => {
+      const cpfInput = document.getElementById("cpf");
+      if (!cpfInput) return;
+      cpfInput.addEventListener("input", () => {
+        let value = cpfInput.value.replace(/\D/g, "").slice(0, 11);
+        let formatted = "";
+        if (value.length > 0) formatted = value.slice(0, 3);
+        if (value.length >= 4) formatted += "." + value.slice(3, 6);
+        if (value.length >= 7) formatted += "." + value.slice(6, 9);
+        if (value.length >= 10) formatted += "-" + value.slice(9, 11);
+        cpfInput.value = formatted;
       });
-    </script>
-  </body>
+    };
+
+    const setupNationalityOther = () => {
+      const select = document.getElementById("nationality");
+      const otherInput = document.getElementById("nationalityOther");
+      if (!select || !otherInput) return;
+
+      otherInput.maxLength = 30;
+
+      select.addEventListener("change", () => {
+        if (select.value === "outroa") {
+          otherInput.style.display = "block";
+        } else {
+          otherInput.style.display = "none";
+          otherInput.value = "";
+        }
+      });
+
+      otherInput.addEventListener("input", () => {
+        otherInput.value = otherInput.value.replace(/[^A-Za-zÀ-ÿ\s]/g, "");
+      });
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+      generateRefCode();
+      setupPasswordHelpers();
+      setupCpfMask();
+      setupNationalityOther();
+    });
+  </script>
+</body>
+
 </html>
